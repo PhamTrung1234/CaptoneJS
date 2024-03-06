@@ -1,9 +1,3 @@
-// Components
-
-
-@import "./Components/button";
-@import "./Components/dropdown";
-
 
 //helper
 
@@ -11,11 +5,23 @@
 @import "./helper/valiable";
 
 
-
-
-
 // BASE 
 @import "./Base/reset";
+
+// Components
+
+
+@import "./Components/button";
+@import "./Components/dropdown";
+@import "./Components/heading3";
+
+
+
+
+
+
+
+
 
 //Layout
 
