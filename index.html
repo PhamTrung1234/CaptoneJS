@@ -19,6 +19,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- owl-carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font google  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,6 +31,7 @@
     />
     <!-- main -->
     <link rel="stylesheet" href="./css/main.css" />
+    
   </head>
   <body>
     <!-- header ánh -->
@@ -43,17 +47,241 @@
     <!-- carousel trung -->
     <section class="phoneCarousel">
       <div class="carousel__content">
+        <!-- <div class="container-fluid"> -->
+          <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/05_01_2015_11_14_47_TGDd-TetSamsung-800x350.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/07_01_2015_16_04_37_TGDd-Lumia-tet-dai-gia-800-350.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/31_12_2014_13_35_23_TGDd-HappyNewYear-800x350.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/31_12_2014_13_48_59_TGDd-GalaxyA5-800x350.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/31_12_2014_18_00_02_TGDd-Ipad-mini-800-350.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+           <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+              <span class=" carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </button>
+          </div>
+        </div>
+      <div class="carousel__banner mt-4">
+        <div class="container">
+          <div class="owl-carousel owl-theme">
+            <div class="carousel__img img-fluid">
+              <img src="./img/201501051404337920_Zen-A450-main-80.jpg" alt="...">
+            </div>
+            <div class="carousel__img img-fluid">
+              <img src="./img/201501051028347290_desire-820s.png" alt="...">
+            </div>
+            <div class="carousel__img img-fluid">
+              <img src="./img/201412281535338870_banner-note-4.png" alt="../">
+            </div>
+      </div>
+        </div>
       </div>
     </section>
     <!-- product trung -->
     <section class="product">
-      <div class="product__content"></div>
+       <div class="container">
+        <div class="product__content">
+          <h2 class="heading__border">sản phẩm</h2>
+          <div class="product__top d-flex justify-content-between align-items-center">
+            <div class="product__left">
+              <span>sản phẩm/ trang</span>
+              <select>
+                <option>10</option>
+                <option>20</option>
+                <option>50</option>
+                <option>100</option>
+                <option>500</option>
+              </select>
+            </div>
+            <div class="product__right">
+              <span>sắp xếp</span>
+              <select id="sapxep">
+                    <option >mặc định</option>
+                    <option value="samsung">máy samsung</option>
+                    <option value="iphone">máy iphone</option>
+                    <option value="uptodown">giá giảm dần</option>
+                    <option value="downtoup">giá tăng dần</option>
+              </select>
+            </div>
+          </div>
+          <div id="productbody">
+            <div class="row">
+              <div class="col-12 col-md-4  col-lg-2 product__item">
+                <div class="product--item">
+                  <a href="#">
+                    <div class="product__img">
+                      <img class="img-fluid" src="./img/0c9767e5-3759-4229-8613-18e0d6993c3f.jpg" alt="...">
+                    <span class="product__giamgia">5%</span>
+                    </div>
+                    <h3 class="mt-2">samsunggalaxy3</h3>
+                    <p class="d-flex justify-content-between align-items-center">
+                      <span>70000000</span>
+                      <span>5%</span>
+                    </p>
+                    <p class="d-flex justify-content-between align-items-center">
+                      <span>màn hình </span>
+                      <span>16inch</span>
+                    </p>
+                    <p class="d-flex justify-content-between align-items-center">
+                      <span>camera trước</span>
+                      <span>15mp</span>
+                    </p>
+                    <p class="d-flex justify-content-between align-items-center">
+                      <span>camera sau</span>
+                      <span>30mp</span>
+                    </p>
+                    <div class="product__button mt-2 d-flex justify-content-between align-items-center">
+                      <div class="product__icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                      </div>
+                      <div class="product__buy ">
+                        <button><i class="fa-solid fa-cart-shopping"></i><span>buy now</span></button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+          <div class="product__nav">
+            <ul class="d-flex justify-content-center align-items-center">
+              <li ><a href="#">
+                <i class="fa-solid fa-angles-left"></i>
+              </a></li>
+              <li class="active"><a href="#">
+                1
+              </a></li>
+              <li><a href="#">
+                 2
+              </a></li>
+              <li><a href="#">
+                  3
+              </a></li>
+              <li><a href="#">
+                <i class="fa-solid fa-angles-right"></i>
+              </a></li>
+            </ul>
+          </div>
+        </div>
+       </div>
+    
     </section>
     <footer>
+      <div class="container">
       <!-- dùng chung class logo và nav__bottom ánh  -->
       <div class="nav__buttom"></div>
       <!-- trung -->
-      <div class="footer__content"></div>
+      <div class="footer__content">
+        <div class="row">
+          <div class="col-md-12 col-lg-4">
+            <h3 class="heading__border">CÔNG TY TNHH PHÁT TRIỂN CÔNG NGHỆ RUNTIME</h3>
+             <ul>
+              <li><a href="#">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>5/12A Quang Trung, P.14, Q.Gò Vấp, Tp.Hồ Chí Minh</span>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-solid fa-phone"></i>
+                <span>(08) 66 85 85 38</span>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-solid fa-envelope"></i>
+                <span> info@runtime.vn</span>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-brands fa-weixin"></i>
+                <span> http://www.runtime.vn</span>
+              </a></li>
+              
+            </ul>
+           
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <h3 class="heading__border">HỖ TRỢ KHÁCH HÀNG</h3>
+           <ul>
+            <li><a href="#">
+              <i class="fa-solid fa-caret-right"></i>
+              <span>Quy trình đổi trả</span>
+            </a></li>
+            <li><a href="#">
+              <i class="fa-solid fa-caret-right"></i>
+               <span>Quy trình giao hàng</span>
+            </a></li>
+            <li><a href="#">
+              <i class="fa-solid fa-caret-right"></i>
+             <span>Hình thức thanh toán</span>
+            </a></li>
+            <li><a href="#">
+              <i class="fa-solid fa-caret-right"></i>
+              <span>Quy trình bảo hành</span>
+            </a></li>
+            
+           </ul>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <h3 class="heading__border">THÔNG TIN</h3>
+            <ul>
+              <li><a href="#">
+                <i class="fa-solid fa-caret-right"></i>
+                <span>Về chúng tôi</span>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-solid fa-caret-right"></i>
+                <span>Tuyển dụng</span>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-solid fa-caret-right"></i>
+                <span>Liên hệ</span>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-solid fa-caret-right"></i>
+                <span>Trợ giúp</span>
+              </a></li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="footer__icon d-flex justify-content-center align-items-center">
+          <ul>
+            <li class="footer__item1"><a href="#">
+              <i class="fa-brands fa-google-plus-g"></i>
+            </a></li>
+            <li class="footer__item2"><a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a></li>
+            <li class="footer__item3"><a href="#">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a></li>
+            <li class="footer__item4"><a href="#">
+              <i class="fa-brands fa-youtube"></i>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom  ">
+      <p>Copyright © 2017 by RUNTIME. All right reserved.</p>
+    </div>
     </footer>
 
     <!-- bootstrap -->
@@ -74,7 +302,24 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
+    <!-- owl-carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        1000:{
+            items:3
+        },
+        
+    }
+})
+    </script>
     <!-- Main -->
     <script src="./JS/product.js"></script>
     <script src="./JS/api.js"></script>
