@@ -17,7 +17,10 @@ a{
     }
  }
  ul{
-    li{
-        list-style: none;
-    }
- }
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    display: inline-block;
+}
