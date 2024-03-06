@@ -36,23 +36,106 @@
   <body>
     <!-- header ánh -->
     <header>
-      <div class="header__nav-top"></div>
-      <div class="header__content">
-        <div class="logo"></div>
-        <div class="header__form"></div>
-        <div class="header__right"></div>
-      </div>
-      <div class="nav__buttom"></div>
+      <section class="nav__top">
+        <div class="container d-flex justify-content-between align-items-center ">
+          <div class="navtop__content">
+            <ul>
+              <li><a href="#">VỀ KAMI</a></li>
+              <li><a href="#">KINH DOANH SĨ</a></li>
+              <li><a href="#">HỆ THỐNG PHÂN PHỐI</a></li>
+              <li><a href="#">KIẾN THỨC</a></li>
+            </ul>
+          </div>
+          <ul class="contact">
+            <li><a href="#">
+              <i class="fa fa-phone"></i>
+              Hotline:0934977826
+            </a></li>
+            <li><a href="#">
+              <i class="fa fa-sign-in"></i>
+              YÊU THÍCH
+            </a></li>
+            <li><a href="#">
+              <i class="fa fa-key"></i>
+              LIÊN HỆ
+            </a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="nav__middle">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-sm-12 col-md-3 col-xs-12">
+              <!-- Header Logo -->
+              <a class="logo" href="#"><img alt="" src="./img/logo.png"></a>
+              <!-- End Header Logo -->
+            </div>
+            <div class="col-lg-5 col-sm-12 col-md-5 col-xs-12">
+              <!-- Search-col -->
+              <div class="box-search">
+                <div class="box-search">
+                  <div class="box-input d-flex">
+                    <div class="input-group-search" style="">
+                      <input type="text" name="search" class="index_input_search" id="txtsearch"
+                        onblur="if(this.value=='')this.value='Tìm kiếm...'"
+                        onfocus="if(this.value=='Tìm kiếm...')this.value=''" value="Tìm kiếm...">
+                    </div>
+                    <div class="group-collection-search">
+                      <button type="button" id="dropdown-collection" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" data-groupid="0"><span>Tất cả</span> <i class="fa fa-angle-down"></i></button>
+                      <ul class="dropdown-menu change-collection-id" aria-labelledby="dropdown-collection">
+                        <li><a data-collectionid="0" href="javascript:void(0);">Tất cả</a></li>
+                        <li><a data-collectionid="1371" href="javascript:void(0);">Điện thoại</a></li>
+                        <li><a data-collectionid="1372" href="javascript:void(0);">Máy tính bảng</a></li>
+                        <li><a data-collectionid="1373" href="javascript:void(0);">Laptop</a></li>
+                        <li><a data-collectionid="1374" href="javascript:void(0);">Máy để bàn</a></li>
+                        <li><a data-collectionid="1375" href="javascript:void(0);">Phụ kiện</a></li>
+                        <li><a data-collectionid="1376" href="javascript:void(0);">Máy cũ</a></li>
+                      </ul>
+                    </div>
+                    <button type="button" class="btn-search" id="btnsearch"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- End Search-col -->
+            </div>
+            <!-- giỏ hàng  -->
+            <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12">
+              <div class="cart_header">
+                <a href="#" title="Giỏ hàng">
+                  <span class="cart_header_icon"></span>
+                  <span class="cart-items">0</span>
+                </a>
+                <div class="cart_header_top_box">
+                  <div class="cart_empty">Giỏ hàng của bạn vẫn chưa có sản phẩm nào.</div>
+                </div>
+              </div>
+      
+              <div class="order-tracking">
+                <a href="#"><i class="fa-solid fa-pencil"></i> Kiểm tra đơn hàng</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="navigation-menu">
+        <div class="container">
+          <div class="navtop__content d-flex align-items-center justify-content-between">
+            <ul>
+              <li><a href="#">TRANG CHỦ</a></li>
+              <li><a href="#">SẢN PHẨM</a></li>
+              <li><a href="#">TIN TỨC</a></li>
+              <li><a href="#">GIỚI THIỆU</a></li>
+              <li><a href="#">LIÊN HỆ</a></li>
+
+            </ul>
+          </div>
+        </div>
+        
+      </section>
     </header>
-    <!-- carousel trung -->
-    <section class="phoneCarousel">
-      <div class="carousel__content">
-      </div>
-    </section>
-    <!-- product trung -->
-    <section class="product">
-      <div class="product__content"></div>
-    </section>
+    
     <footer>
       <div class="container">
       <!-- dùng chung class logo và nav__bottom ánh  -->
