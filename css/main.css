@@ -406,6 +406,9 @@ header .navigation-menu li:last-of-type a {
   padding: 0;
   min-height: 36px;
 }
+.footer-menu .navbar-default .navbar-header .navbar-toggle {
+  display: none;
+}
 .footer-menu .navbar-default .navbar-collapse::before, .footer-menu .navbar-default .nav::before {
   content: "";
   display: table;
