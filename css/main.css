@@ -19,8 +19,14 @@ a:hover {
   text-decoration: none;
 }
 
-ul li {
-  list-style: none;
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
 }
 
 .product__buy button {
@@ -39,10 +45,6 @@ ul li {
 .heading__border {
   color: #f73b00;
   border-bottom: 1px solid #333333;
-}
-
-a {
-  text-decoration: none;
 }
 
 ul {
@@ -496,6 +498,9 @@ header .navigation-menu li:last-child a::after {
   margin-top: 0em;
 }
 
+footer .footer__content li {
+  display: block;
+}
 footer .footer__content .heading__border {
   color: #333333;
   font-size: 18px;
@@ -549,4 +554,5 @@ footer .footer__icon .footer__item4 a {
   color: #fff;
   text-align: center;
   padding: 10px;
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */
