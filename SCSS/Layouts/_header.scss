@@ -3,6 +3,7 @@ ul{
     list-style: outside none none;
     margin: 0;
     padding: 0;
+  
 }
 
 
@@ -11,40 +12,30 @@ header{
     background-color: rgb(52, 52, 205);
     margin-bottom: 0;
     color: #ffffffff;
-    height: 32px;
-    line-height: 15px;
+    height: 39px;
+    line-height: 19px;
     li{
-        padding: 6px 0;
-       
+        display: inline-block;
+        padding: 8px 0 8px 10px;
+        a{
+            color: #ffffff;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 0 10px 0 0;
+            border-right: 1px solid #999;
+            font-weight: 500;
+            font-size: 12px;
+            transition: color 0.5s;
+            &:hover{
+                color: #ed3237;
+            }
+        }
+        
     }
-    ul{
-        display: flex;
+    li:last-of-type a{
+        border-right: none;
     }
     
-    a{
-        text-align: center;
-        padding: 0 0;
-        color:#fff;
-        font-size: 12px;
-        text-decoration: none;
-        transition: color 0.5s;
-        &:hover{
-            color: rgb(216, 5, 5);
-        }
-    }
-    li a::after{
-        content:"|";
-        font-weight: 300;
-        margin: 0 5px 0 10px;
-    }
-    li a:hover::after {
-        color: #fff; 
-    }
-    .navtop__content li:last-child a::after {content: "";}
-    .contact{
-        font-size: 12px;
-    }
-    .contact li:last-child a::after{content: "";}
     
 }
 
@@ -232,36 +223,36 @@ header{
 .clear{
     clear: both;
 }
-.navigation-menu{
+.navigation-menu {
     background-color: #a8cf45;
     color: #ffffff;
     height: 36px;
-    line-height: 36px;
-    font-size: 13px;
-     a{
-        text-decoration: none;
-        color: #fff;
-        font-weight: bold;
-        transition: color 0.5s;
-     &:hover{
-        color: #ed3237;
-     }   
-    }
+    line-height: 20px;
     
-    li{
-        display: inline-block;
+  
+    li {
+      display: inline-block;
+      padding: 8px 0 8px 10px;
+  
+      a {
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 10px 0 0;
+        border-right: 1px solid #999;
+        font-weight: bold;
+        font-size: 12px;
+        transition: color 0.5s;
+  
+        &:hover {
+          color: #ed3237;
+        }
+      }
+  
+      &:last-of-type a {
+        border-right: 1px solid #a8cf45;
+      }
     }
-    li a::after{
-        content:"|";
-        font-weight: 300;
-        margin: 0 5px 0 10px;
-       
-    }
-    li a:hover::after {
-        color: #fff; /* Đổi màu của ::after khi <a> được hover, bạn có thể thay đổi màu này tùy ý */
-    }
-    li:last-child a::after{
-        content: "";
-    }
-}
+  }
+  
 }
