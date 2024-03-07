@@ -27,6 +27,7 @@ header{
         color:#fff;
         font-size: 12px;
         text-decoration: none;
+        transition: color 0.3s;
         &:hover{
             color: rgb(216, 5, 5);
         }
@@ -234,6 +235,7 @@ header{
         text-decoration: none;
         color: #fff;
         font-weight: bold;
+        transition: color 0.4s;
         &:hover{
             color: #ed3237;
         }

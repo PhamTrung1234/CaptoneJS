@@ -72,6 +72,7 @@ header .nav__top a {
   color: #fff;
   font-size: 12px;
   text-decoration: none;
+  transition: color 0.3s;
 }
 header .nav__top a:hover {
   color: rgb(216, 5, 5);
@@ -272,6 +273,7 @@ header .navigation-menu a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
+  transition: color 0.4s;
 }
 header .navigation-menu a:hover {
   color: #ed3237;
@@ -388,6 +390,10 @@ header .navigation-menu li:last-child a::after {
   border-right: 1px solid #333333;
 }
 
+#menu input {
+  border-radius: 50px;
+}
+
 .footer-menu {
   background-color: #a8cf45;
   color: #ffffff;
@@ -448,6 +454,10 @@ header .navigation-menu li:last-child a::after {
   border-right: 1px solid #999;
   font-weight: bold;
   font-size: 12px;
+  transition: color 0.5s;
+}
+.footer-menu .navbar-default li a:hover {
+  color: #ed3237;
 }
 
 .footer-menu .input-group-btn {
@@ -498,9 +508,6 @@ header .navigation-menu li:last-child a::after {
   margin-top: 0em;
 }
 
-footer .footer__content li {
-  display: block;
-}
 footer .footer__content .heading__border {
   color: #333333;
   font-size: 18px;
