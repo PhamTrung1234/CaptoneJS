@@ -1,13 +1,13 @@
 
 #menu{
     input{
-        border-radius: 50px;
+        border-radius: 34px;
     }
 }
 .footer-menu{
-    background-color: #a8cf45;
+    background-color: $color-blue-2;
     color: #ffffff;
-    border-top: 5px solid #ed3237;
+    border-top: 5px solid $color-red-1;
     padding: 10px 0;
     margin-top: 5px;
     
@@ -33,10 +33,10 @@
         .navbar-header{
             float: left;
             .navbar-toggle{
-                border-color: #a8cf45;
+                border-color: $color-blue-2;
                 border-radius: 0;
                 .icon-bar{
-                    background-color: #ed3237;
+                    background-color: $color-red-1;
                 }
             }
             .navbar-brand{
@@ -55,19 +55,19 @@
                 float: left;
             }
         li{
-            display: inline-block;
+           
             padding: 8px 0 8px 10px;
             a{
-                color: #ffffff;
+                color: $color-white-1;
                 text-transform: uppercase;
                 text-align: center;
                 padding: 0 10px 0 0;
-                border-right: 1px solid #999;
+                border-right: 1px solid $color-white-2;
                 font-weight: bold;
                 font-size: 12px;
                 transition: color 0.5s;
                 &:hover{
-                    color: #ed3237;
+                    color: $color-red-1;
                 }
             }
             
@@ -107,18 +107,18 @@
         }
         .btn-default{
             position: relative;
-            margin-left: -30px;
+            margin-left: -34px;
             border-radius: 50%;
             width: 34px;
             height: 34px;
-            background: #ed3237;
+            background: $color-red-1;
             z-index: 99;
             margin-bottom: 0;
             .fa-send::before{
                 content: "\f1d8";
             }
             i{
-                color: #a8cf45;
+                color: $color-blue-2;
                 margin-left: -5px;
             }
         }
@@ -128,11 +128,7 @@
             display: table-cell;
         }
     }
-.newsletter-content{
-        .input-group{
-            .btn-default{}
-        }
-    }
+
     form{
         display: block;
         margin-top: 0em;
@@ -147,6 +143,9 @@
 
 footer{
     .footer__content{
+        li{
+            display: block;
+        }
                 .heading__border{
             color: $color-black-1;
             font-size: 18px;
@@ -183,7 +182,7 @@ footer{
             line-height: 50px;
             display: block;
             i{
-                color: #fff;
+                color: $color-white-1;
             }
         }
         .footer__item1 a{
@@ -204,7 +203,7 @@ footer{
  .footer__bottom{
         p{
             background-color: $color-blue-1;
-            color: #fff;
+            color: $color-white-1;
             text-align: center;
             padding: 10px;
             margin: 0;
