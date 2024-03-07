@@ -9,3 +9,15 @@ html,body{
     color: $color-black-1;
     background-color: $color-black-3;
 }
+a{
+    text-decoration: none;
+    color: $color-black-1;
+    &:hover{
+        text-decoration: none;
+    }
+ }
+ ul{
+    li{
+        list-style: none;
+    }
+ }

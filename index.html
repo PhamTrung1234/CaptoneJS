@@ -19,6 +19,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- owl-carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font google  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,6 +31,7 @@
     />
     <!-- main -->
     <link rel="stylesheet" href="./css/main.css" />
+    
   </head>
   <body>
     <!-- header ánh -->
@@ -71,7 +75,7 @@
               <div class="box-search">
                 <div class="box-search">
                   <div class="box-input d-flex">
-                    <div class="input-group-search" style="">
+                    <div class="input-group-search" >
                       <input type="text" name="search" class="index_input_search" id="txtsearch"
                         onblur="if(this.value=='')this.value='Tìm kiếm...'"
                         onfocus="if(this.value=='Tìm kiếm...')this.value=''" value="Tìm kiếm...">
@@ -133,6 +137,7 @@
     </header>
     <div class="clear"></div>
     <footer>
+      <div class="container">
       <!-- dùng chung class logo và nav__bottom ánh  -->
       <div class="footer-menu">
         <div class="container">
@@ -194,7 +199,97 @@
         </div>
     </div>
       <!-- trung -->
-      <div class="footer__content"></div>
+      <div class="footer__content">
+        <div class="row">
+          <div class="col-md-12 col-lg-4">
+            <h3 class="heading__border">CÔNG TY TNHH PHÁT TRIỂN CÔNG NGHỆ RUNTIME</h3>
+             <ul>
+              <li><a href="#">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>5/12A Quang Trung, P.14, Q.Gò Vấp, Tp.Hồ Chí Minh</span>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-solid fa-phone"></i>
+                <span>(08) 66 85 85 38</span>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-solid fa-envelope"></i>
+                <span> info@runtime.vn</span>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-brands fa-weixin"></i>
+                <span> http://www.runtime.vn</span>
+              </a></li>
+              
+            </ul>
+           
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <h3 class="heading__border">HỖ TRỢ KHÁCH HÀNG</h3>
+           <ul>
+            <li><a href="#">
+              <i class="fa-solid fa-caret-right"></i>
+              <span>Quy trình đổi trả</span>
+            </a></li>
+            <li><a href="#">
+              <i class="fa-solid fa-caret-right"></i>
+               <span>Quy trình giao hàng</span>
+            </a></li>
+            <li><a href="#">
+              <i class="fa-solid fa-caret-right"></i>
+             <span>Hình thức thanh toán</span>
+            </a></li>
+            <li><a href="#">
+              <i class="fa-solid fa-caret-right"></i>
+              <span>Quy trình bảo hành</span>
+            </a></li>
+            
+           </ul>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <h3 class="heading__border">THÔNG TIN</h3>
+            <ul>
+              <li><a href="#">
+                <i class="fa-solid fa-caret-right"></i>
+                <span>Về chúng tôi</span>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-solid fa-caret-right"></i>
+                <span>Tuyển dụng</span>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-solid fa-caret-right"></i>
+                <span>Liên hệ</span>
+              </a></li>
+              <li><a href="#">
+                <i class="fa-solid fa-caret-right"></i>
+                <span>Trợ giúp</span>
+              </a></li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="footer__icon d-flex justify-content-center align-items-center">
+          <ul>
+            <li class="footer__item1"><a href="#">
+              <i class="fa-brands fa-google-plus-g"></i>
+            </a></li>
+            <li class="footer__item2"><a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a></li>
+            <li class="footer__item3"><a href="#">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a></li>
+            <li class="footer__item4"><a href="#">
+              <i class="fa-brands fa-youtube"></i>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom  ">
+      <p>Copyright © 2017 by RUNTIME. All right reserved.</p>
+    </div>
     </footer>
 
     <!-- bootstrap -->
@@ -215,7 +310,24 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
+    <!-- owl-carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        1000:{
+            items:3
+        },
+        
+    }
+})
+    </script>
     <!-- Main -->
     <script src="./JS/product.js"></script>
     <script src="./JS/api.js"></script>

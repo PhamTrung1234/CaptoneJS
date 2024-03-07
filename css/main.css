@@ -13,6 +13,36 @@ html, body {
 
 a {
   text-decoration: none;
+  color: #333333;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+.product__buy button {
+  border: none;
+  outline: none;
+  box-shadow: 0px 1px 6px 5px #E5E5E5;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #1D00DB;
+  transition: all 0.5s;
+}
+.product__buy button:hover {
+  transform: scale(1.1);
+}
+
+.heading__border {
+  color: #f73b00;
+  border-bottom: 1px solid #333333;
+}
+
+a {
+  text-decoration: none;
 }
 
 ul {
@@ -256,6 +286,106 @@ header .navigation-menu li:last-child a::after {
   content: "";
 }
 
+.phoneCarousel .carousel__banner .owl-theme.owl-carousel .owl-dots {
+  display: none;
+}
+
+.product {
+  padding: 50px 0;
+}
+.product .product__item {
+  padding: 5px;
+}
+.product .product__item .product--item {
+  margin: 50px 0;
+  background-color: #fff;
+  box-shadow: 0px 1px 6px 5px #E5E5E5;
+  padding: 10px;
+  overflow: hidden;
+}
+.product .product__item .product--item img {
+  box-shadow: 0px 1px 6px 5px #E5E5E5;
+  transition: all 0.5s;
+}
+.product .product__item .product--item .product__img {
+  position: relative;
+}
+.product .product__item .product--item .product__img:hover img {
+  transform: scale(1.05);
+}
+.product .product__item .product--item p {
+  margin: 0;
+  font-size: 14px;
+  color: #888888;
+  font-weight: 500;
+}
+.product .product__item .product--item p:first-of-type span:first-of-type {
+  color: #C90000;
+  font-weight: 700;
+}
+.product .product__item .product--item p:first-of-type span:last-of-type {
+  color: #f73b00;
+  background-color: #FFCE85;
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 0 10px;
+}
+.product .product__item .product--item .product__giamgia {
+  position: absolute;
+  top: 0px;
+  left: -49px;
+  background-color: #ed3237;
+  color: #fff;
+  font-weight: 700;
+  height: 29px;
+  text-align: center;
+  width: 137px;
+  transform: rotate(-45deg);
+  z-index: 1;
+  overflow: hidden;
+  line-height: 30px;
+}
+.product .product__item .product--item h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 18px;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+.product .product__item .product--item .product__button .product__icon {
+  font-size: 10px;
+  color: #E18402;
+}
+.product .product__item .product--item:hover h3 {
+  color: #1D00DB;
+}
+.product .product__nav li {
+  display: inline-block;
+}
+.product .product__nav li a {
+  padding: 15px 20px;
+  border: 1px solid #333333;
+  font-size: 15px;
+  border-right: 0px;
+  font-weight: 500;
+}
+.product .product__nav li i {
+  font-size: 15px;
+}
+.product .product__nav li:hover a {
+  background-color: #eee;
+}
+.product .product__nav li.active a {
+  background-color: #E18402;
+  color: #ed3237;
+}
+.product .product__nav li:last-of-type a {
+  border-right: 1px solid #333333;
+}
+
 .footer-menu {
   background-color: #a8cf45;
   color: #ffffff;
@@ -364,4 +494,59 @@ header .navigation-menu li:last-child a::after {
 .footer-menu form {
   display: block;
   margin-top: 0em;
+}
+
+footer .footer__content .heading__border {
+  color: #333333;
+  font-size: 18px;
+}
+footer .footer__content i {
+  color: #ed3237;
+}
+footer .footer__content a:hover span {
+  color: #E18402;
+}
+footer .footer__icon li {
+  display: inline-block;
+  margin: 0 15px;
+}
+footer .footer__icon li i {
+  transition: all 0.5s ease-in-out;
+}
+footer .footer__icon li:hover a {
+  background-color: #E18402;
+}
+footer .footer__icon li:hover i {
+  transform: rotateY(360deg);
+}
+footer .footer__icon a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  display: block;
+}
+footer .footer__icon a i {
+  color: #fff;
+}
+footer .footer__icon .footer__item1 a {
+  background-color: #C90000;
+}
+footer .footer__icon .footer__item2 a {
+  background-color: #048db8;
+}
+footer .footer__icon .footer__item3 a {
+  background-color: #394e8e;
+}
+footer .footer__icon .footer__item4 a {
+  background-color: #ed3237;
+}
+
+.footer__bottom p {
+  background-color: #1D00DB;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
 }/*# sourceMappingURL=main.css.map */
