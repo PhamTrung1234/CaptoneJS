@@ -27,7 +27,7 @@ header{
         color:#fff;
         font-size: 12px;
         text-decoration: none;
-        transition: color 0.3s;
+        transition: color 0.5s;
         &:hover{
             color: rgb(216, 5, 5);
         }
@@ -36,6 +36,9 @@ header{
         content:"|";
         font-weight: 300;
         margin: 0 5px 0 10px;
+    }
+    li a:hover::after {
+        color: #fff; 
     }
     .navtop__content li:last-child a::after {content: "";}
     .contact{
@@ -217,6 +220,10 @@ header{
         a{
             color: #a8cf45;
             font-size: 14px;
+            transition: color 0.5s;
+            &:hover{
+                color: #ed3237;
+            }
         }
     }
 
@@ -231,15 +238,16 @@ header{
     height: 36px;
     line-height: 36px;
     font-size: 13px;
-    a{
+     a{
         text-decoration: none;
         color: #fff;
         font-weight: bold;
-        transition: color 0.4s;
-        &:hover{
-            color: #ed3237;
-        }
+        transition: color 0.5s;
+     &:hover{
+        color: #ed3237;
+     }   
     }
+    
     li{
         display: inline-block;
     }
@@ -247,6 +255,10 @@ header{
         content:"|";
         font-weight: 300;
         margin: 0 5px 0 10px;
+       
+    }
+    li a:hover::after {
+        color: #fff; /* Đổi màu của ::after khi <a> được hover, bạn có thể thay đổi màu này tùy ý */
     }
     li:last-child a::after{
         content: "";
