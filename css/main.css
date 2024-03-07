@@ -308,6 +308,10 @@ header .navigation-menu li:last-child a::after {
 .product {
   padding: 50px 0;
 }
+.product h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
 .product .product__item {
   padding: 5px;
 }
@@ -317,10 +321,12 @@ header .navigation-menu li:last-child a::after {
   box-shadow: 0px 1px 6px 5px #E5E5E5;
   padding: 10px;
   overflow: hidden;
+  border-radius: 5px;
 }
 .product .product__item .product--item img {
   box-shadow: 0px 1px 6px 5px #E5E5E5;
   transition: all 0.5s;
+  border-radius: 5px;
 }
 .product .product__item .product--item .product__img {
   position: relative;
@@ -402,11 +408,11 @@ header .navigation-menu li:last-child a::after {
 }
 
 #menu input {
-  border-radius: 50px;
+  border-radius: 34px;
 }
 
 .footer-menu {
-  background-color: #a8cf45;
+  background-color: #BEDB00;
   color: #ffffff;
   border-top: 5px solid #ed3237;
   padding: 10px 0;
@@ -434,7 +440,7 @@ header .navigation-menu li:last-child a::after {
   float: left;
 }
 .footer-menu .navbar-default .navbar-header .navbar-toggle {
-  border-color: #a8cf45;
+  border-color: #BEDB00;
   border-radius: 0;
 }
 .footer-menu .navbar-default .navbar-header .navbar-toggle .icon-bar {
@@ -454,11 +460,10 @@ header .navigation-menu li:last-child a::after {
   float: left;
 }
 .footer-menu .navbar-default li {
-  display: inline-block;
   padding: 8px 0 8px 10px;
 }
 .footer-menu .navbar-default li a {
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
   padding: 0 10px 0 0;
@@ -496,7 +501,7 @@ header .navigation-menu li:last-child a::after {
 }
 .footer-menu .input-group .btn-default {
   position: relative;
-  margin-left: -30px;
+  margin-left: -34px;
   border-radius: 50%;
   width: 34px;
   height: 34px;
@@ -508,7 +513,7 @@ header .navigation-menu li:last-child a::after {
   content: "\f1d8";
 }
 .footer-menu .input-group .btn-default i {
-  color: #a8cf45;
+  color: #BEDB00;
   margin-left: -5px;
 }
 .footer-menu .input-group .form-control, .footer-menu .input-group .input-group-btn {
@@ -519,6 +524,9 @@ header .navigation-menu li:last-child a::after {
   margin-top: 0em;
 }
 
+footer .footer__content li {
+  display: block;
+}
 footer .footer__content .heading__border {
   color: #333333;
   font-size: 18px;
