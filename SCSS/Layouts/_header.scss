@@ -7,13 +7,11 @@ ul{
     margin: 0;
     padding: 0;
 }
-li{
-    display: inline-block;
-}
+
 
 header{
 .nav__top{
-    background-color: #ed3237;
+    background-color: rgb(52, 52, 205);
     margin-bottom: 0;
     color: #ffffffff;
     height: 32px;
@@ -22,6 +20,10 @@ header{
         padding: 6px 0;
         
     }
+    ul{
+        display: flex;
+    }
+    
     a{
         text-align: center;
         padding: 0 0;
@@ -29,7 +31,7 @@ header{
         font-size: 12px;
         text-decoration: none;
         &:hover{
-            color: #a8cf45;
+            color: rgb(216, 5, 5);
         }
     }
     li a::after{
@@ -222,7 +224,7 @@ header{
 
     
 }
-.row::after{
+.clear{
     clear: both;
 }
 .navigation-menu{
@@ -238,6 +240,9 @@ header{
         &:hover{
             color: #ed3237;
         }
+    }
+    li{
+        display: inline-block;
     }
     li a::after{
         content:"|";
