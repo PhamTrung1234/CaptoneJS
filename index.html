@@ -285,6 +285,67 @@
        
       </div>
       
+
+      <div class="footer-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <nav class="navbar-default">
+                        <div class="navbar-header">
+                            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-footer">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/"><img src="./img/logo.png" alt="CÔNG TY TNHH PHÁT TRIỂN CÔNG NGHỆ RUNTIME"></a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbar-footer">
+                            <ul class="nav  d-flex">
+                                <li>
+                                    <a href="/trang-chu.html">
+                                        <span>Trang chủ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/san-pham.html">
+                                        <span>Sản phẩm</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tin-tuc.html">
+                                        <span>Tin tức</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/gioi-thieu.html">
+                                        <span>Giới thiệu</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/lien-he.html">
+                                        <span>Liên hệ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </nav>
+                </div>
+                <div class="col-md-3 ng-scope" ng-controller="moduleController" ng-init="initController()">
+                    <form class="newsletter-content ng-pristine ng-valid-email ng-invalid ng-invalid-required" ng-submit="registerNewsletter()">
+                        <div class="input-group">
+                            <input  class="form-control" placeholder="Nhập Email đăng ký khuyến mãi" required="" type="email">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default"><i class="fa fa-send"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
       <!-- trung -->
       <div class="footer__content pt-4">
         <div class="container">
@@ -375,8 +436,12 @@
         </div>
       </div>
     </div>
+
   
-    <div class="footer__bottom  ">
+
+
+    </div>
+    <div class="footer__bottom pt-2">
       <p>Copyright © 2017 by RUNTIME. All right reserved.</p>
     </div>
     </footer>

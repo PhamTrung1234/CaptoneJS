@@ -111,6 +111,11 @@
             display: table-cell;
         }
     }
+.newsletter-content{
+        .input-group{
+            .btn-default{}
+        }
+    }
     form{
         display: block;
         margin-top: 0em;
@@ -125,10 +130,7 @@
 
 footer{
     .footer__content{
-        li{
-            display: block ;
-        }
-        .heading__border{
+                .heading__border{
             color: $color-black-1;
             font-size: 18px;
         }
