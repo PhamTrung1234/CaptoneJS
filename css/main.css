@@ -508,6 +508,9 @@ header .navigation-menu li:last-of-type a {
   margin-top: 0em;
 }
 
+footer .footer__content {
+  background-color: #e5e5e5;
+}
 footer .footer__content li {
   display: block;
 }
