@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -58,42 +57,28 @@ header .nav__top {
   background-color: rgb(52, 52, 205);
   margin-bottom: 0;
   color: white;
-  height: 32px;
-  line-height: 15px;
+  height: 39px;
+  line-height: 19px;
 }
 header .nav__top li {
-  padding: 6px 0;
+  display: inline-block;
+  padding: 8px 0 8px 10px;
 }
-header .nav__top ul {
-  display: flex;
-}
-header .nav__top a {
+header .nav__top li a {
+  color: #ffffff;
+  text-transform: uppercase;
   text-align: center;
-  padding: 0 0;
-  color: #fff;
+  padding: 0 10px 0 0;
+  border-right: 1px solid #999;
+  font-weight: 500;
   font-size: 12px;
-  text-decoration: none;
   transition: color 0.5s;
 }
-header .nav__top a:hover {
-  color: rgb(216, 5, 5);
+header .nav__top li a:hover {
+  color: #ed3237;
 }
-header .nav__top li a::after {
-  content: "|";
-  font-weight: 300;
-  margin: 0 5px 0 10px;
-}
-header .nav__top li a:hover::after {
-  color: #fff;
-}
-header .nav__top .navtop__content li:last-child a::after {
-  content: "";
-}
-header .nav__top .contact {
-  font-size: 12px;
-}
-header .nav__top .contact li:last-child a::after {
-  content: "";
+header .nav__top li:last-of-type a {
+  border-right: none;
 }
 header .nav__middle {
   padding: 20px 0;
@@ -274,31 +259,27 @@ header .navigation-menu {
   background-color: #a8cf45;
   color: #ffffff;
   height: 36px;
-  line-height: 36px;
-  font-size: 13px;
-}
-header .navigation-menu a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: color 0.5s;
-}
-header .navigation-menu a:hover {
-  color: #ed3237;
+  line-height: 20px;
 }
 header .navigation-menu li {
   display: inline-block;
+  padding: 8px 0 8px 10px;
 }
-header .navigation-menu li a::after {
-  content: "|";
-  font-weight: 300;
-  margin: 0 5px 0 10px;
+header .navigation-menu li a {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 10px 0 0;
+  border-right: 1px solid #999;
+  font-weight: bold;
+  font-size: 12px;
+  transition: color 0.5s;
 }
-header .navigation-menu li a:hover::after {
-  color: #fff; /* Đổi màu của ::after khi <a> được hover, bạn có thể thay đổi màu này tùy ý */
+header .navigation-menu li a:hover {
+  color: #ed3237;
 }
-header .navigation-menu li:last-child a::after {
-  content: "";
+header .navigation-menu li:last-of-type a {
+  border-right: 1px solid #a8cf45;
 }
 
 .phoneCarousel .carousel__banner .owl-theme.owl-carousel .owl-dots {
@@ -469,6 +450,9 @@ header .navigation-menu li:last-child a::after {
 }
 .footer-menu .navbar-default li a:hover {
   color: #ed3237;
+}
+.footer-menu .navbar-default li:last-of-type a {
+  border-right: 1px solid #a8cf45;
 }
 
 .footer-menu .input-group-btn {
