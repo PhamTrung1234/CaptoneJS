@@ -80,6 +80,12 @@ header .nav__top li a:hover {
 header .nav__top li:last-of-type a {
   border-right: none;
 }
+header .nav__top li:first-of-type a {
+  padding-left: 0;
+}
+header .nav__top li:first-of-type {
+  padding-left: 0;
+}
 header .nav__middle {
   padding: 20px 0;
   background-color: #fff;
@@ -280,6 +286,12 @@ header .navigation-menu li a:hover {
 }
 header .navigation-menu li:last-of-type a {
   border-right: 1px solid #a8cf45;
+}
+header .navigation-menu li:first-of-type a {
+  padding-left: 0;
+}
+header .navigation-menu li:first-of-type {
+  padding-left: 0;
 }
 
 .phoneCarousel .carousel__banner .owl-theme.owl-carousel .owl-dots {

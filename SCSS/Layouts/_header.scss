@@ -35,8 +35,12 @@ header{
     li:last-of-type a{
         border-right: none;
     }
-    
-    
+    li:first-of-type a{
+        padding-left: 0;
+    }
+    li:first-of-type{
+        padding-left:0 ;
+    }
 }
 
 .nav__middle{
@@ -252,6 +256,12 @@ header{
       &:last-of-type a {
         border-right: 1px solid #a8cf45;
       }
+    }
+    li:first-of-type a{
+        padding-left: 0;
+    }
+    li:first-of-type{
+        padding-left:0 ;
     }
   }
   
