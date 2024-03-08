@@ -47,6 +47,28 @@ li {
   border-bottom: 1px solid #333333;
 }
 
+.backtotop {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #BEDB00;
+  color: #1D00DB;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 40px;
+  opacity: 0.8;
+}
+.backtotop:hover {
+  color: #ed3237;
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
 ul {
   list-style: outside none none;
   margin: 0;
@@ -54,9 +76,9 @@ ul {
 }
 
 header .nav__top {
-  background-color: rgb(52, 52, 205);
+  background-color: #1D00DB;
   margin-bottom: 0;
-  color: white;
+  color: #fff;
   height: 39px;
   line-height: 19px;
 }
@@ -65,14 +87,14 @@ header .nav__top li {
   padding: 8px 0 8px 10px;
 }
 header .nav__top li a {
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
   padding: 0 10px 0 0;
   border-right: 1px solid #999;
   font-weight: 500;
   font-size: 12px;
-  transition: color 0.5s;
+  transition: color 0.5s ease-in-out;
 }
 header .nav__top li a:hover {
   color: #ed3237;
@@ -101,7 +123,7 @@ header .nav__middle .box-search {
   padding: 6px;
 }
 header .nav__middle .box-search .box-input .input-group-search {
-  border: 1px solid #a8cf45;
+  border: 1px solid #BEDB00;
   border-radius: 3px 0 0 3px;
   display: block;
   font-weight: 400;
@@ -130,7 +152,7 @@ header .nav__middle .box-search .box-input .group-collection-search {
 header .nav__middle .box-search .box-input .group-collection-search button {
   background-color: transparent;
   background-image: none;
-  border: 1px solid #a8cf45;
+  border: 1px solid #BEDB00;
   border-radius: 0;
   cursor: pointer;
   display: inline-block;
@@ -179,7 +201,7 @@ header .nav__middle .box-search .box-input .group-collection-search .dropdown-me
   clear: both;
   font-weight: 400;
   line-height: 1.42857143;
-  color: #333;
+  color: #333333;
   white-space: nowrap;
 }
 header .nav__middle .box-search .box-input .btn-search {
@@ -251,7 +273,7 @@ header .nav__middle .order-tracking {
   padding-bottom: 10px;
 }
 header .nav__middle .order-tracking a {
-  color: #a8cf45;
+  color: #BEDB00;
   font-size: 14px;
   transition: color 0.5s;
 }
@@ -262,8 +284,8 @@ header .clear {
   clear: both;
 }
 header .navigation-menu {
-  background-color: #a8cf45;
-  color: #ffffff;
+  background-color: #BEDB00;
+  color: #fff;
   height: 36px;
   line-height: 20px;
 }
@@ -272,20 +294,20 @@ header .navigation-menu li {
   padding: 8px 0 8px 10px;
 }
 header .navigation-menu li a {
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   text-align: center;
   padding: 0 10px 0 0;
   border-right: 1px solid #999;
   font-weight: bold;
   font-size: 12px;
-  transition: color 0.5s;
+  transition: color 0.5s ease-in-out;
 }
 header .navigation-menu li a:hover {
   color: #ed3237;
 }
 header .navigation-menu li:last-of-type a {
-  border-right: 1px solid #a8cf45;
+  border-right: 1px solid #BEDB00;
 }
 header .navigation-menu li:first-of-type a {
   padding-left: 0;
@@ -400,7 +422,7 @@ header .navigation-menu li:first-of-type {
   border-right: 1px solid #333333;
 }
 
-#menu input {
+#inputemail {
   border-radius: 34px;
 }
 
@@ -535,6 +557,9 @@ footer .footer__content .heading__border {
 }
 footer .footer__content i {
   color: #ed3237;
+}
+footer .footer__content a span {
+  transition: all 0.3s ease-in-out;
 }
 footer .footer__content a:hover span {
   color: #E18402;

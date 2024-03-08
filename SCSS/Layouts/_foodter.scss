@@ -1,8 +1,7 @@
 
-#menu{
-    input{
-        border-radius: 34px;
-    }
+#inputemail{
+    border-radius: 34px;
+    
 }
 .footer-menu{
     background-color: $color-blue-2;
@@ -159,6 +158,8 @@ footer{
             color: $color-red-1;
         }
         a{
+            span{
+            transition: all 0.3s ease-in-out;}
             &:hover span{
                 color: $color-red-2;
             }

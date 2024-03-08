@@ -340,7 +340,7 @@
                 <div class="col-md-3 ng-scope" ng-controller="moduleController" ng-init="initController()">
                     <form class="newsletter-content ng-pristine ng-valid-email ng-invalid ng-invalid-required" ng-submit="registerNewsletter()">
                         <div class="input-group">
-                            <input  class="form-control" placeholder="Nhập Email đăng ký khuyến mãi" required="" type="email">
+                            <input  class="form-control" placeholder="Nhập Email đăng ký khuyến mãi" required="" type="email" id="inputemail">
                             <span class="input-group-btn">
                                 <button type="submit" class="btn btn-default"><i class="fa fa-send"></i></button>
                             </span>
@@ -424,7 +424,7 @@
             </ul>
           </div>
         </div>
-        <div class=" footer__icon d-flex justify-content-center align-items-center mb-3">
+        <div class=" footer__icon d-flex justify-content-center align-items-center pb-4">
           <ul>
             <li class="footer__item1"><a href="#">
               <i class="fa-brands fa-google-plus-g"></i>
@@ -447,11 +447,11 @@
 
 
     </div>
-    <div class="footer__bottom pt-2">
+    <div class="footer__bottom ">
       <p>Copyright © 2017 by RUNTIME. All right reserved.</p>
     </div>
     </footer>
-
+     <a href="#" class="backtotop cd-top text-replace js-cd-top"><i class="fa-solid fa-turn-up"></i></a>
     <!-- bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -492,7 +492,8 @@
     <script src="./JS/product.js"></script>
     <script src="./JS/api.js"></script>
     <script src="./JS/validation.js"></script>
-
+    <script src="./JS/util.js"></script>
     <script src="./JS/main.js"></script>
+
   </body>
 </html>
