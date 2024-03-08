@@ -9,7 +9,7 @@
     text-align: center;
     border-radius: 50%;
     line-height: 40px;
-    opacity: 0.8;
+    
     &:hover{
         color: $color-red-1;
     }
@@ -17,4 +17,7 @@
 .cd-top--is-visible { // back-to-top button visible
     visibility: visible;
     opacity: 1;
+  }
+  .cd-top--fade-out { // reduce button opacity if user keeps scrolling
+    opacity: .8;
   }

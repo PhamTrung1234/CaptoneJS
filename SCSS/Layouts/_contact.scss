@@ -1,10 +1,21 @@
 .product {
-  padding: 50px 0;
- h2{
-    text-transform: uppercase;
-    text-align: center;
-    
- }
+  padding: 50px 0 30px 0;
+  h2 {
+    span {
+      text-transform: uppercase;
+      text-align: center;
+      padding: 15px 70px;
+      border-radius: 50px;
+      background: linear-gradient(
+          217deg,
+          rgba(255, 0, 0, 0.8),
+          rgba(255, 0, 0, 0) 70.71%
+        ),
+        linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+      color: $color-blue-1;
+    }
+  }
   .product__item {
     padding: 5px;
     .product--item {
@@ -83,31 +94,16 @@
     }
   }
   .product__nav {
-    li {
-      display: inline-block;
-      a {
-        padding: 15px 20px;
-        border: 1px solid $color-black-1;
-        font-size: 15px;
-        border-right: 0px;
-        font-weight: 500;
-      }
-      i {
-        font-size: 15px;
-      }
-      &:hover a {
-        background-color: #eee;
-      }
-    }
-    li.active {
-      a {
-        background-color: $color-red-2;
-        color: $color-red-1;
-      }
-    }
-    li:last-of-type {
-      a {
-        border-right: 1px solid $color-black-1;
+    a {
+      font-size: 20px;
+      text-transform: uppercase;
+      color: $color-blue-3;
+      border: 1px solid $color-blue-3;
+      padding: 15px 70px;
+      border-radius: 30px;
+      transition: all 0.5s ease-in-out;
+      &:hover{
+        color: $color-red-2;
       }
     }
   }

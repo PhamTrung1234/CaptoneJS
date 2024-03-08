@@ -43,7 +43,6 @@ li {
 }
 
 .heading__border {
-  color: #f73b00;
   border-bottom: 1px solid #333333;
 }
 
@@ -58,7 +57,6 @@ li {
   text-align: center;
   border-radius: 50%;
   line-height: 40px;
-  opacity: 0.8;
 }
 .backtotop:hover {
   color: #ed3237;
@@ -67,6 +65,10 @@ li {
 .cd-top--is-visible {
   visibility: visible;
   opacity: 1;
+}
+
+.cd-top--fade-out {
+  opacity: 0.8;
 }
 
 ul {
@@ -321,11 +323,15 @@ header .navigation-menu li:first-of-type {
 }
 
 .product {
-  padding: 50px 0;
+  padding: 50px 0 30px 0;
 }
-.product h2 {
+.product h2 span {
   text-transform: uppercase;
   text-align: center;
+  padding: 15px 70px;
+  border-radius: 50px;
+  background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  color: #1D00DB;
 }
 .product .product__item {
   padding: 5px;
@@ -398,28 +404,17 @@ header .navigation-menu li:first-of-type {
 .product .product__item .product--item:hover h3 {
   color: #1D00DB;
 }
-.product .product__nav li {
-  display: inline-block;
+.product .product__nav a {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #048db8;
+  border: 1px solid #048db8;
+  padding: 15px 70px;
+  border-radius: 30px;
+  transition: all 0.5s ease-in-out;
 }
-.product .product__nav li a {
-  padding: 15px 20px;
-  border: 1px solid #333333;
-  font-size: 15px;
-  border-right: 0px;
-  font-weight: 500;
-}
-.product .product__nav li i {
-  font-size: 15px;
-}
-.product .product__nav li:hover a {
-  background-color: #eee;
-}
-.product .product__nav li.active a {
-  background-color: #E18402;
-  color: #ed3237;
-}
-.product .product__nav li:last-of-type a {
-  border-right: 1px solid #333333;
+.product .product__nav a:hover {
+  color: #E18402;
 }
 
 #inputemail {
@@ -428,8 +423,7 @@ header .navigation-menu li:first-of-type {
 
 .footer-menu {
   background-color: #BEDB00;
-  color: #ffffff;
-  border-top: 5px solid #ed3237;
+  color: #fff;
   padding: 10px 0;
   margin-top: 5px;
 }
