@@ -121,19 +121,25 @@
       </section>
       <section class="navigation-menu">
         <div class="container">
-          <div class="navtop__content d-flex align-items-center justify-content-between">
-            <ul>
-              <li><a href="#">TRANG CHỦ</a></li>
-              <li><a href="#">SẢN PHẨM</a></li>
-              <li><a href="#">TIN TỨC</a></li>
-              <li><a href="#">GIỚI THIỆU</a></li>
-              <li><a href="#">LIÊN HỆ</a></li>
-
-            </ul>
-          </div>
+            <div class="navtop__content d-flex align-items-center justify-content-between">
+                <ul class="nav__menu">
+                    <li><a href="#">TRANG CHỦ</a></li>
+                    <li class="level0 dropdown">
+                        <a href="#">SẢN PHẨM</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">APPLE 1</a></li>
+                            <li><a href="#">SAMSUNG 2</a></li>
+                            <!-- Thêm các mục sản phẩm khác tại đây -->
+                        </ul>
+                    </li>
+                    <li><a href="#">TIN TỨC</a></li>
+                    <li><a href="#">GIỚI THIỆU</a></li>
+                    <li><a href="#">LIÊN HỆ</a></li>
+                </ul>
+            </div>
         </div>
-        
-      </section>
+    </section>
+    
     </header>
     <!-- carousel trung -->
     <section class="phoneCarousel">
@@ -187,7 +193,7 @@
     <section class="product">
        <div class="container">
         <div class="product__content">
-          <h2 class="heading__border">sản phẩm</h2>
+          <h2 class="d-flex justify-content-center"><span>sản phẩm</span></h2>
           <div class="product__top d-flex justify-content-between align-items-center">
             <div class="product__left">
               <span>sản phẩm/ trang</span>
@@ -254,24 +260,8 @@
              
             </div>
           </div>
-          <div class="product__nav">
-            <ul class="d-flex justify-content-center align-items-center">
-              <li ><a href="#">
-                <i class="fa-solid fa-angles-left"></i>
-              </a></li>
-              <li class="active"><a href="#">
-                1
-              </a></li>
-              <li><a href="#">
-                 2
-              </a></li>
-              <li><a href="#">
-                  3
-              </a></li>
-              <li><a href="#">
-                <i class="fa-solid fa-angles-right"></i>
-              </a></li>
-            </ul>
+          <div class="product__nav d-flex justify-content-center">
+            <a href="#">xem thêm</a>
           </div>
         </div>
        </div>
@@ -282,6 +272,67 @@
       <!-- dùng chung class logo và nav__bottom ánh  -->
       <div class="nav__buttom"></div>
       
+
+      <div class="footer-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <nav class="navbar-default">
+                        <div class="navbar-header">
+                            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-footer">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="/"><img src="./img/logo.png" alt="CÔNG TY TNHH PHÁT TRIỂN CÔNG NGHỆ RUNTIME"></a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbar-footer">
+                            <ul class="nav  d-flex">
+                                <li>
+                                    <a href="/trang-chu.html">
+                                        <span>Trang chủ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/san-pham.html">
+                                        <span>Sản phẩm</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/tin-tuc.html">
+                                        <span>Tin tức</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/gioi-thieu.html">
+                                        <span>Giới thiệu</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/lien-he.html">
+                                        <span>Liên hệ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </nav>
+                </div>
+                <div class="col-md-3 ng-scope" ng-controller="moduleController" ng-init="initController()">
+                    <form class="newsletter-content ng-pristine ng-valid-email ng-invalid ng-invalid-required" ng-submit="registerNewsletter()">
+                        <div class="input-group">
+                            <input  class="form-control" placeholder="Nhập Email đăng ký khuyến mãi" required="" type="email" id="inputemail">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default"><i class="fa fa-send"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
       <!-- trung -->
       <div class="footer__content pt-4">
         <div class="container">
@@ -354,7 +405,7 @@
             </ul>
           </div>
         </div>
-        <div class=" footer__icon d-flex justify-content-center align-items-center mb-3">
+        <div class=" footer__icon d-flex justify-content-center align-items-center pb-4">
           <ul>
             <li class="footer__item1"><a href="#">
               <i class="fa-brands fa-google-plus-g"></i>
@@ -372,12 +423,16 @@
         </div>
       </div>
     </div>
+
   
-    <div class="footer__bottom  ">
+
+
+    </div>
+    <div class="footer__bottom ">
       <p>Copyright © 2017 by RUNTIME. All right reserved.</p>
     </div>
     </footer>
-
+     <a href="#" class="backtotop cd-top text-replace js-cd-top"><i class="fa-solid fa-turn-up"></i></a>
     <!-- bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -418,7 +473,8 @@
     <script src="./JS/product.js"></script>
     <script src="./JS/api.js"></script>
     <script src="./JS/validation.js"></script>
-
+    <script src="./JS/util.js"></script>
     <script src="./JS/main.js"></script>
+
   </body>
 </html>

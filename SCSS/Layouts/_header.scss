@@ -3,50 +3,49 @@ ul{
     list-style: outside none none;
     margin: 0;
     padding: 0;
+  
 }
 
 
 header{
 .nav__top{
-    background-color: rgb(52, 52, 205);
+    background-color: $color-blue-1;
     margin-bottom: 0;
-    color: #ffffffff;
-    height: 32px;
-    line-height: 15px;
+    color: $color-white-1;
+    height: 39px;
+    line-height: 19px;
     li{
-        padding: 6px 0;
-       
-    }
-    ul{
-        display: flex;
-    }
-    
-    a{
-        text-align: center;
-        padding: 0 0;
-        color:#fff;
-        font-size: 12px;
-        text-decoration: none;
-        &:hover{
-            color: rgb(216, 5, 5);
+        display: inline-block;
+        padding: 8px 0 8px 10px;
+        a{
+            color: $color-white-1;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 0 10px 0 0;
+            border-right: 1px solid $color-white-2;
+            font-weight: 500;
+            font-size: 12px;
+            transition: color 0.5s ease-in-out;
+            &:hover{
+                color: $color-red-1;
+            }
         }
+        
     }
-    li a::after{
-        content:"|";
-        font-weight: 300;
-        margin: 0 5px 0 10px;
+    li:last-of-type a{
+        border-right: none;
     }
-    .navtop__content li:last-child a::after {content: "";}
-    .contact{
-        font-size: 12px;
+    li:first-of-type a{
+        padding-left: 0;
     }
-    .contact li:last-child a::after{content: "";}
-    
+    li:first-of-type{
+        padding-left:0 ;
+    }
 }
 
 .nav__middle{
     padding: 20px 0;
-    background-color: #fff;
+    background-color: $color-white-1;
     
     .logo{
         height: 58px;
@@ -59,7 +58,7 @@ header{
         padding: 6px;
         .box-input{
             .input-group-search{
-                border: 1px solid #a8cf45;
+                border: 1px solid $color-blue-2;
                 border-radius: 3px 0 0 3px;
                 display: block;
                 font-weight: 400;
@@ -89,7 +88,7 @@ header{
                 button{
                     background-color: transparent;
                     background-image: none;
-                    border: 1px solid #a8cf45;
+                    border: 1px solid $color-blue-2;
                     border-radius: 0;
                     cursor: pointer;
                     display: inline-block;
@@ -117,7 +116,7 @@ header{
                 }
                 .dropdown-menu{
                     background-clip: padding-box;
-                    background-color: #fff;
+                    background-color: $color-white-1;
                     border: 1px solid rgba(0, 0, 0, 0.15);
                     border-radius: 4px;
                     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
@@ -138,7 +137,7 @@ header{
                         clear: both;
                         font-weight: 400;
                         line-height: 1.42857143;
-                        color: #333;
+                        color: $color-black-1;
                         white-space: nowrap;
                     }
                 }
@@ -152,7 +151,7 @@ header{
                 padding-left: 10px;
                 padding-right: 10px;
                 text-transform: uppercase;
-                background-color: #ed3237;
+                background-color: $color-red-1;
                 border: medium none;
                 color: #ffffff;
                 font-weight: bold;
@@ -189,10 +188,10 @@ header{
             right: 0;
             text-align: center;
             top: 11px;
-            color: #fff;
+            color: $color-white-1;
         }
         .cart_header_top_box{
-            background: #fff none repeat scroll 0 0;
+            background: $color-white-1 none repeat scroll 0 0;
             box-shadow: 0 0 10px #000000;
             color: #666;
             display: block;
@@ -214,8 +213,12 @@ header{
         margin-right: 50px;
         padding-bottom: 10px;
         a{
-            color: #a8cf45;
+            color: $color-blue-2;
             font-size: 14px;
+            transition: color 0.5s;
+            &:hover{
+                color: $color-red-1;
+            }
         }
     }
 
@@ -224,30 +227,42 @@ header{
 .clear{
     clear: both;
 }
-.navigation-menu{
-    background-color: #a8cf45;
-    color: #ffffff;
+.navigation-menu {
+    background-color: $color-blue-2;
+    color: $color-white-1;
     height: 36px;
-    line-height: 36px;
-    font-size: 13px;
-    a{
-        text-decoration: none;
-        color: #fff;
+    line-height: 20px;
+    
+  
+    li {
+      display: inline-block;
+      padding: 8px 0 8px 10px;
+  
+      a {
+        color: $color-white-1;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 10px 0 0;
+        border-right: 1px solid $color-white-2;
         font-weight: bold;
-        &:hover{
-            color: #ed3237;
+        font-size: 12px;
+        transition: color 0.5s ease-in-out;
+  
+        &:hover {
+          color: $color-red-1;
         }
+      }
+  
+      &:last-of-type a {
+        border-right: 1px solid $color-blue-2;
+      }
     }
-    li{
-        display: inline-block;
+    li:first-of-type a{
+        padding-left: 0;
     }
-    li a::after{
-        content:"|";
-        font-weight: 300;
-        margin: 0 5px 0 10px;
+    li:first-of-type{
+        padding-left:0 ;
     }
-    li:last-child a::after{
-        content: "";
-    }
-}
+  }
+  
 }
