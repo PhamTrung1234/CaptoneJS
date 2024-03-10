@@ -1,3 +1,8 @@
+@media screen and (max-width: 992px) {
+  header .navbar-nav .nav-item a {
+    border: none;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -123,10 +128,7 @@ header .navbar .show .nav-item {
   z-index: 100;
   border-bottom: 1px solid #666;
   width: 200px;
-  transition: background-color 0.5s, border-right 0.5s;
-}
-header .navbar .show .nav-item a {
-  border-right: none;
+  transition: background-color 0.5s;
 }
 header .navbar .show .nav__contact .active {
   margin-top: 5px;
@@ -325,9 +327,10 @@ header .navigation-menu li a {
   text-align: center;
   padding: 0 10px 0 0;
   border-right: 1px solid #999;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 12px;
   transition: color 0.5s ease-in-out;
+  font-weight: bold;
 }
 header .navigation-menu li a:hover {
   color: #ed3237;
@@ -340,10 +343,7 @@ header .navigation-menu .show .nav-item {
   z-index: 100;
   border-bottom: 1px solid #666;
   width: 200px;
-  transition: background-color 0.5s, border-right 0.5s;
-}
-header .navigation-menu .show .nav-item a {
-  border-right: none;
+  transition: background-color 0.5s;
 }
 header .navigation-menu .show .active {
   margin-top: 5px;
@@ -486,7 +486,8 @@ header .navigation-menu li:first-of-type {
 .footer-menu .navbar-default .navbar-header .navbar-toggle {
   display: none;
 }
-.footer-menu .navbar-default .navbar-collapse::before, .footer-menu .navbar-default .nav::before {
+.footer-menu .navbar-default .navbar-collapse::before,
+.footer-menu .navbar-default .nav::before {
   content: "";
   display: table;
   width: 0;
@@ -580,7 +581,8 @@ header .navigation-menu li:first-of-type {
   color: #BEDB00;
   margin-left: -5px;
 }
-.footer-menu .input-group .form-control, .footer-menu .input-group .input-group-btn {
+.footer-menu .input-group .form-control,
+.footer-menu .input-group .input-group-btn {
   display: table-cell;
 }
 .footer-menu form {

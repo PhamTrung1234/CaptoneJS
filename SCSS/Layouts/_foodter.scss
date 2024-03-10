@@ -1,218 +1,205 @@
-
-#inputemail{
-    border-radius: 34px;
-    
+#inputemail {
+  border-radius: 34px;
 }
-.footer-menu{
-    background-color: $color-blue-2;
-    color: $color-white-1;
-    
-    padding: 10px 0;
-    margin-top: 5px;
-    
-    
-    .navbar-default{
-        background-color: transparent;
-        border: none;
-        margin: 0;
+.footer-menu {
+  background-color: $color-blue-2;
+  color: $color-white-1;
+
+  padding: 10px 0;
+  margin-top: 5px;
+
+  .navbar-default {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-height: 36px;
+    .navbar-header {
+      .navbar-toggle {
+        display: none;
+      }
+    }
+    .navbar-collapse::before,
+    .nav::before {
+      content: "";
+      display: table;
+      width: 0;
+    }
+    .collapse {
+      display: block !important;
+      height: auto !important;
+      padding-bottom: 0;
+      overflow: visible !important;
+    }
+    .navbar-header {
+      float: left;
+      .navbar-toggle {
+        border-color: $color-blue-2;
+        border-radius: 0;
+        .icon-bar {
+          background-color: $color-red-1;
+        }
+      }
+      .navbar-brand {
         padding: 0;
-        min-height: 36px;
-        .navbar-header{
-            .navbar-toggle{
-                display: none;
-            }
+        height: 36px;
+        margin-right: 15px;
+        img {
+          max-height: 100%;
+          filter: brightness(0) invert(1);
         }
-        .navbar-collapse::before, .nav::before{
-            content: "";
-            display: table;
-            width: 0;
-        }
-         .collapse{
-            display: block !important;
-            height: auto !important;
-            padding-bottom: 0;
-            overflow: visible!important;
-        }
-        .navbar-header{
-            float: left;
-            .navbar-toggle{
-                border-color: $color-blue-2;
-                border-radius: 0;
-                .icon-bar{
-                    background-color: $color-red-1;
-                }
-            }
-            .navbar-brand{
-                padding: 0;
-                height: 36px;
-                margin-right: 15px;
-                img{
-                    max-height: 100%;
-                    filter: brightness(0) invert(1);
-                }
-            }
-        }
-        
-            ul{
-                display: block;
-                float: left;
-            }
-        li{
-           
-            padding: 8px 0 8px 10px;
-            a{
-                color: $color-white-1;
-                text-transform: uppercase;
-                text-align: center;
-                padding: 0 10px 0 0;
-                border-right: 1px solid $color-white-2;
-                font-weight: bold;
-                font-size: 12px;
-                transition: color 0.5s;
-                &:hover{
-                    color: $color-red-1;
-                }
-            }
-            
-        }
-        li:last-of-type a{
-            border-right: none;
-        }
-        
-        
-    
+      }
     }
+
+    ul {
+      display: block;
+      float: left;
+    }
+    li {
+      padding: 8px 0 8px 10px;
+      a {
+        color: $color-white-1;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 10px 0 0;
+        border-right: 1px solid $color-white-2;
+        font-weight: bold;
+        font-size: 12px;
+        transition: color 0.5s;
+        &:hover {
+          color: $color-red-1;
+        }
+        
+      }
+    }
+    li:last-of-type a {
+      border-right: none;
+    }
+  }
 }
-.footer-menu{
-    .input-group-btn{
-        width: 1%;
-        white-space: nowrap;
-        vertical-align: middle;
-    }
-    .input-group{
-        position: relative;
-        display: table;
-        border-collapse: separate;
-        .form-control{
-            border-radius: 20px;
-            
-            &::placeholder{
-                font-size: 14px;
-            }
-        }
-        
-        .form-control{
-            position: relative;
-            z-index: 2;
-           float:left;
-            width: 100%;
-            margin-bottom: 0;
-        }
-        .btn-default{
-            position: relative;
-            margin-left: -34px;
-            border-radius: 50%;
-            width: 34px;
-            height: 34px;
-            background: $color-red-1;
-            z-index: 99;
-            margin-bottom: 0;
-            .fa-send::before{
-                content: "\f1d8";
-            }
-            i{
-                color: $color-blue-2;
-                margin-left: -5px;
-            }
-        }
+.footer-menu {
+  .input-group-btn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  .input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    .form-control {
+      border-radius: 20px;
 
-        
-        .form-control,.input-group-btn{
-            display: table-cell;
-        }
+      &::placeholder {
+        font-size: 14px;
+      }
     }
 
-    form{
-        display: block;
-        margin-top: 0em;
-            
-        
+    .form-control {
+      position: relative;
+      z-index: 2;
+      float: left;
+      width: 100%;
+      margin-bottom: 0;
+    }
+    .btn-default {
+      position: relative;
+      margin-left: -34px;
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      background: $color-red-1;
+      z-index: 99;
+      margin-bottom: 0;
+      .fa-send::before {
+        content: "\f1d8";
+      }
+      i {
+        color: $color-blue-2;
+        margin-left: -5px;
+      }
     }
 
+    .form-control,
+    .input-group-btn {
+      display: table-cell;
+    }
+  }
 
+  form {
+    display: block;
+    margin-top: 0em;
+  }
 }
 
-
-
-footer{
-    .footer__content{
-        background-color: #e5e5e5;
-        li{
-            display: block;
-        }
-                .heading__border{
-            color: $color-black-1;
-            font-size: 18px;
-        }
-        i{
-            color: $color-red-1;
-        }
-        a{
-            span{
-            transition: all 0.3s ease-in-out;}
-            &:hover span{
-                color: $color-red-2;
-            }
-        }
+footer {
+  .footer__content {
+    background-color: #e5e5e5;
+    li {
+      display: block;
     }
-    .footer__icon{
-        li{
-            display: inline-block;
-            margin:  0 15px;
-            i{
-                transition: all 0.5s ease-in-out;
-            }
-            &:hover a{
-                background-color: $color-red-2;
-            }
-            &:hover i{
-                transform: rotateY(360deg);
-            }
-        }
-        a{
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 18px;
-            text-align: center;
-            line-height: 50px;
-            display: block;
-            i{
-                color: $color-white-1;
-            }
-        }
-        .footer__item1 a{
-            background-color: $color-red-3;
-        }
-        .footer__item2 a{
-            background-color: $color-blue-3;
-        }
-        .footer__item3 a{
-            background-color: $color-blue-4;
-        }
-        .footer__item4 a{
-            background-color: $color-red-1;
-        }
+    .heading__border {
+      color: $color-black-1;
+      font-size: 18px;
     }
-   
+    i {
+      color: $color-red-1;
+    }
+    a {
+      span {
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover span {
+        color: $color-red-2;
+      }
+    }
+  }
+  .footer__icon {
+    li {
+      display: inline-block;
+      margin: 0 15px;
+      i {
+        transition: all 0.5s ease-in-out;
+      }
+      &:hover a {
+        background-color: $color-red-2;
+      }
+      &:hover i {
+        transform: rotateY(360deg);
+      }
+    }
+    a {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 18px;
+      text-align: center;
+      line-height: 50px;
+      display: block;
+      i {
+        color: $color-white-1;
+      }
+    }
+    .footer__item1 a {
+      background-color: $color-red-3;
+    }
+    .footer__item2 a {
+      background-color: $color-blue-3;
+    }
+    .footer__item3 a {
+      background-color: $color-blue-4;
+    }
+    .footer__item4 a {
+      background-color: $color-red-1;
+    }
+  }
 }
- .footer__bottom{
-        p{
-            background-color: $color-blue-1;
-            color: $color-white-1;
-            text-align: center;
-            padding: 10px;
-            margin: 0;
-        }
-    }
-
+.footer__bottom {
+  p {
+    background-color: $color-blue-1;
+    color: $color-white-1;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+  }
+}
