@@ -26,6 +26,9 @@ header{
         }
         
     }
+    
+        
+      
     li:last-of-type a{
         border-right: none;
     }
@@ -40,7 +43,7 @@ header{
         height: 30px;
         color: black;
         padding: 0rem 0.75rem;
-        margin-top: -4px;
+        margin-top: -5px;
         
     }
 
@@ -48,7 +51,7 @@ header{
       @include nav-show;
        .nav__contact{
         .active{
-            margin-top: 5px;
+            margin-top: -3px;
         }
         
        }
@@ -58,6 +61,32 @@ header{
        }
     }
     }
+   
+    }
+    .nav__hotline{
+        display: none;
+    }
+    @include respond-to(lg){
+        .nav__hotline{
+            display: block;
+            position: absolute;
+            right: 10%;
+            top: 10px;
+            border: none;
+            background-color: $color-blue-1;
+            color: $color-white-1;
+            font-size: 12px;
+            &:hover{
+                color: $color-red-1;
+            }
+            
+        }
+        .nav__phone{
+            display: none;
+        }
+        .nav-item{
+            text-align: center;
+        }
     }
     
     

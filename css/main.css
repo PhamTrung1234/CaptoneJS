@@ -121,7 +121,7 @@ header .navbar button {
   height: 30px;
   color: black;
   padding: 0rem 0.75rem;
-  margin-top: -4px;
+  margin-top: -5px;
 }
 header .navbar .show .nav-item {
   background-color: #BEDB00;
@@ -131,10 +131,34 @@ header .navbar .show .nav-item {
   transition: background-color 0.5s;
 }
 header .navbar .show .nav__contact .active {
-  margin-top: 5px;
+  margin-top: -3px;
 }
 header .navbar .show .navbar-nav li a {
   border-right: none;
+}
+header .navbar .nav__hotline {
+  display: none;
+}
+@media (max-width: 991px) {
+  header .navbar .nav__hotline {
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 10px;
+    border: none;
+    background-color: #1D00DB;
+    color: #fff;
+    font-size: 12px;
+  }
+  header .navbar .nav__hotline:hover {
+    color: #ed3237;
+  }
+  header .navbar .nav__phone {
+    display: none;
+  }
+  header .navbar .nav-item {
+    text-align: center;
+  }
 }
 header .nav__middle {
   padding: 20px 0;
