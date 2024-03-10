@@ -36,41 +36,51 @@
   <body>
     <!-- header ánh -->
     <header>
-      <section class="nav__top">
-        <div class="container d-flex justify-content-between align-items-center ">
-          <div class="navtop__content">
-            <ul>
-              <li><a href="#">VỀ KAMI</a></li>
-              <li><a href="#">KINH DOANH SĨ</a></li>
-              <li><a href="#">HỆ THỐNG PHÂN PHỐI</a></li>
-              <li><a href="#">KIẾN THỨC</a></li>
+      <nav class="navbar  navbar-expand-lg"id="navbarTop">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse justify-content-between  navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav nav__contact">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Về Kami</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kinh doanh sĩ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hệ thống phân phối</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kiến thức</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a href="#" class="nav__icon"><i class="fa fa-phone"></i> Hotline:0908770095</a>
+                
+              </li>
+              <li class="nav-item">
+                <a href="#"><i class="fa fa-sign-in"></i> YÊU THÍCH</a>
+              </li>
+              <li class="nav-item">
+                <a href="#"class="nav__icon" ><i class="fa fa-key"></i> LIÊN HỆ</a>
+              </li>
             </ul>
           </div>
-          <ul class="contact">
-            <li><a href="#">
-              <i class="fa fa-phone"></i>
-              Hotline:0934977826
-            </a></li>
-            <li><a href="#">
-              <i class="fa fa-sign-in"></i>
-              YÊU THÍCH
-            </a></li>
-            <li><a href="#">
-              <i class="fa fa-key"></i>
-              LIÊN HỆ
-            </a></li>
-          </ul>
+          
         </div>
-      </section>
+      </nav>
       <section class="nav__middle">
         <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-sm-12 col-md-3 col-xs-12">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
               <!-- Header Logo -->
               <a class="logo" href="#"><img alt="" src="./img/logo.png"></a>
               <!-- End Header Logo -->
             </div>
-            <div class="col-lg-5 col-sm-12 col-md-5 col-xs-12">
+            <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12">
               <!-- Search-col -->
               <div class="box-search">
                 <div class="box-search">
@@ -101,7 +111,7 @@
               <!-- End Search-col -->
             </div>
             <!-- giỏ hàng  -->
-            <div class="col-lg-4 col-sm-12 col-md-4 col-xs-12">
+            <div class="col-lg-3 col-sm-12 col-md-4 col-xs-12">
               <div class="cart_header">
                 <a href="#" title="Giỏ hàng">
                   <span class="cart_header_icon"></span>
@@ -119,26 +129,42 @@
           </div>
         </div>
       </section>
-      <section class="navigation-menu">
-        <div class="container">
-            <div class="navtop__content d-flex align-items-center justify-content-between">
-                <ul class="nav__menu">
-                    <li><a href="#">TRANG CHỦ</a></li>
-                    <li class="level0 dropdown">
-                        <a href="#">SẢN PHẨM</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">APPLE 1</a></li>
-                            <li><a href="#">SAMSUNG 2</a></li>
-                            <!-- Thêm các mục sản phẩm khác tại đây -->
-                        </ul>
-                    </li>
-                    <li><a href="#">TIN TỨC</a></li>
-                    <li><a href="#">GIỚI THIỆU</a></li>
-                    <li><a href="#">LIÊN HỆ</a></li>
-                </ul>
-            </div>
+    <nav class="navigation-menu navbar navbar-expand-lg">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">TRANG CHỦ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                SẢN PHẨM
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">SamSung</a>
+                <a class="dropdown-item" href="#">APPLE</a>
+                <a class="dropdown-item" href="#">OPPO</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">TIN TỨC</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">GIỚI THIỆU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">LIÊN HỆ</a>
+            </li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </nav>
+      
     
     </header>
     <!-- carousel trung -->

@@ -1,0 +1,32 @@
+@mixin a-style(){
+    color: $color-white-1;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 10px 0 0;
+    border-right: 1px solid $color-white-2;
+    font-weight: 500;
+    font-size: 12px;
+    transition: color 0.5s ease-in-out;
+}
+@mixin a-style2(){
+    color: $color-white-1;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 10px 0 0;
+    border-right: 1px solid $color-white-2;
+    font-weight: bold;
+    font-size: 12px;
+    transition: color 0.5s ease-in-out;
+}
+@mixin nav-show(){
+    .nav-item{
+        background-color: $color-blue-2;
+        z-index: 100;
+        border-bottom: 1px solid #666; 
+        width: 200px; 
+        transition: background-color 0.5s, border-right 0.5s;
+        a{
+            border-right: none;
+        }    
+       }
+}

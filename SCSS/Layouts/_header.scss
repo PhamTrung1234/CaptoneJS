@@ -8,24 +8,18 @@ ul{
 
 
 header{
-.nav__top{
+.navbar {
     background-color: $color-blue-1;
     margin-bottom: 0;
-    color: $color-white-1;
+    color: $color-blue-2 ;
     height: 39px;
     line-height: 19px;
+    position: relative;
     li{
         display: inline-block;
         padding: 8px 0 8px 10px;
         a{
-            color: $color-white-1;
-            text-transform: uppercase;
-            text-align: center;
-            padding: 0 10px 0 0;
-            border-right: 1px solid $color-white-2;
-            font-weight: 500;
-            font-size: 12px;
-            transition: color 0.5s ease-in-out;
+          @include a-style;
             &:hover{
                 color: $color-red-1;
             }
@@ -41,6 +35,32 @@ header{
     li:first-of-type{
         padding-left:0 ;
     }
+     button{
+        background-color: $color-blue-2;
+        height: 30px;
+        color: black;
+        padding: 0rem 0.75rem;
+        margin-top: -4px;
+        
+    }
+
+    .show {
+      @include nav-show;
+       .nav__contact{
+        .active{
+            margin-top: 5px;
+        }
+        
+       }
+       .navbar-nav {li {
+        a{
+        border-right: none;
+       }
+    }
+    }
+    }
+    
+    
 }
 
 .nav__middle{
@@ -208,7 +228,7 @@ header{
         
     }
     .order-tracking{
-        float: right;
+        
         margin-top: 20px;
         margin-right: 50px;
         padding-bottom: 10px;
@@ -232,22 +252,15 @@ header{
     color: $color-white-1;
     height: 36px;
     line-height: 20px;
-    
+    position: relative;
   
     li {
       display: inline-block;
       padding: 8px 0 8px 10px;
   
       a {
-        color: $color-white-1;
-        text-transform: uppercase;
-        text-align: center;
-        padding: 0 10px 0 0;
-        border-right: 1px solid $color-white-2;
-        font-weight: bold;
-        font-size: 12px;
-        transition: color 0.5s ease-in-out;
-  
+       @include a-style2;
+        
         &:hover {
           color: $color-red-1;
         }
@@ -257,6 +270,29 @@ header{
         border-right: 1px solid $color-blue-2;
       }
     }
+    .show{
+       @include nav-show;
+       .active{
+        margin-top: 5px;
+       }
+       .dropdown-menu {
+        background-color: $color-blue-2;
+        text-align: center;
+        border: none;
+        
+        .dropdown-item{
+            &:hover{
+                color: $color-blue-1;
+            }
+        }
+    }
+    }
+    button{
+        background-color: $color-white-1;
+        margin-top: -5px;
+    }
+    
+       
     li:first-of-type a{
         padding-left: 0;
     }
