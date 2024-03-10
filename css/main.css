@@ -77,18 +77,19 @@ ul {
   padding: 0;
 }
 
-header .nav__top {
+header .navbar {
   background-color: #1D00DB;
   margin-bottom: 0;
-  color: #fff;
+  color: #BEDB00;
   height: 39px;
   line-height: 19px;
+  position: relative;
 }
-header .nav__top li {
+header .navbar li {
   display: inline-block;
   padding: 8px 0 8px 10px;
 }
-header .nav__top li a {
+header .navbar li a {
   color: #fff;
   text-transform: uppercase;
   text-align: center;
@@ -98,17 +99,40 @@ header .nav__top li a {
   font-size: 12px;
   transition: color 0.5s ease-in-out;
 }
-header .nav__top li a:hover {
+header .navbar li a:hover {
   color: #ed3237;
 }
-header .nav__top li:last-of-type a {
+header .navbar li:last-of-type a {
   border-right: none;
 }
-header .nav__top li:first-of-type a {
+header .navbar li:first-of-type a {
   padding-left: 0;
 }
-header .nav__top li:first-of-type {
+header .navbar li:first-of-type {
   padding-left: 0;
+}
+header .navbar button {
+  background-color: #BEDB00;
+  height: 30px;
+  color: black;
+  padding: 0rem 0.75rem;
+  margin-top: -4px;
+}
+header .navbar .show .nav-item {
+  background-color: #BEDB00;
+  z-index: 100;
+  border-bottom: 1px solid #666;
+  width: 200px;
+  transition: background-color 0.5s, border-right 0.5s;
+}
+header .navbar .show .nav-item a {
+  border-right: none;
+}
+header .navbar .show .nav__contact .active {
+  margin-top: 5px;
+}
+header .navbar .show .navbar-nav li a {
+  border-right: none;
 }
 header .nav__middle {
   padding: 20px 0;
@@ -269,7 +293,6 @@ header .nav__middle .cart_header .cart_header_top_box {
   z-index: 1002;
 }
 header .nav__middle .order-tracking {
-  float: right;
   margin-top: 20px;
   margin-right: 50px;
   padding-bottom: 10px;
@@ -290,6 +313,7 @@ header .navigation-menu {
   color: #fff;
   height: 36px;
   line-height: 20px;
+  position: relative;
 }
 header .navigation-menu li {
   display: inline-block;
@@ -310,6 +334,31 @@ header .navigation-menu li a:hover {
 }
 header .navigation-menu li:last-of-type a {
   border-right: 1px solid #BEDB00;
+}
+header .navigation-menu .show .nav-item {
+  background-color: #BEDB00;
+  z-index: 100;
+  border-bottom: 1px solid #666;
+  width: 200px;
+  transition: background-color 0.5s, border-right 0.5s;
+}
+header .navigation-menu .show .nav-item a {
+  border-right: none;
+}
+header .navigation-menu .show .active {
+  margin-top: 5px;
+}
+header .navigation-menu .show .dropdown-menu {
+  background-color: #BEDB00;
+  text-align: center;
+  border: none;
+}
+header .navigation-menu .show .dropdown-menu .dropdown-item:hover {
+  color: #1D00DB;
+}
+header .navigation-menu button {
+  background-color: #fff;
+  margin-top: -5px;
 }
 header .navigation-menu li:first-of-type a {
   padding-left: 0;
