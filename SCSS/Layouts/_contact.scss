@@ -4,16 +4,28 @@
     span {
       text-transform: uppercase;
       text-align: center;
-      padding: 15px 70px;
-      border-radius: 50px;
-      background: linear-gradient(
-          217deg,
-          rgba(255, 0, 0, 0.8),
-          rgba(255, 0, 0, 0) 70.71%
-        ),
-        linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
-        linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
-      color: $color-blue-1;
+      color: $color-red-1;
+    }
+  }
+  .product__top {
+    span{
+      font-weight: bold;
+      color: $color-black-1;
+      font-size: 18px;
+      margin-right: 5px;
+    }
+    select{
+     
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        option{
+         background-color: $color-white-1;
+         &:hover{
+          background-color: #f0f0f0;
+         }
+        }
     }
   }
   .product__item {
@@ -106,5 +118,11 @@
         color: $color-red-2;
       }
     }
+  }
+}
+@include respond-to(md){
+  .product__item{
+    margin-left: auto;
+    margin-right: auto;
   }
 }

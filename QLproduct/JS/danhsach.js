@@ -1,0 +1,3 @@
+function DSProduct(){
+    this.arrsp = [] 
+}

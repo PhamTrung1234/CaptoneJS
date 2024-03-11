@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.modal-body .form-group{
+    margin: 5px;
+}
+.nav__themmoi--right span{
+    font-weight: bold;
+    color: #333;
+}
+#sapxep1 {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+#sapxep1 option {
+    background-color: #fff;
+}
+#sapxep1 option:hover {
+    background-color: #f0f0f0;
+}
+.form__button button:first-of-type{
+    display: none;
+}
+
+
