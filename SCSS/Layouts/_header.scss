@@ -95,14 +95,30 @@ header{
 .nav__middle{
     padding: 20px 0;
     background-color: $color-white-1;
-    
+    .image{
+        padding-left: 0 !important;
+    }
     .logo{
         height: 58px;
         display: block;
         img{
             max-height: 100%;
+            padding-left: 20px;
+            
+        }
+        
+    }
+    @include respond-to(lg){
+        .middle__content{
+            padding-left: 0px !important;
         }
     }
+    @include respond-to(md){
+        .middle__content{
+            padding-left: 3px !important;
+        }
+    }
+  
     .box-search{
         padding: 6px;
         .box-input{
@@ -328,6 +344,10 @@ header{
     li:first-of-type{
         padding-left:0 ;
     }
+      .navbar-nav .nav-item .tc{
+                padding-left: 0.2rem !important;
+            }
+        
   }
   
 }

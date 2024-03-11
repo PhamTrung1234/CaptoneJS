@@ -125,6 +125,36 @@
       display: table-cell;
     }
   }
+  @include respond-to(xl){
+    .input-group{
+      width: 270px;
+      margin-left: -40px;
+    }
+  }
+  @include respond-to(lg){
+    .input-group{
+      width: 240px;
+      margin-left: -40px;
+    }
+  }
+  @include respond-to(md){
+    .input-group{
+      width: 550px;
+      padding-left: 30px;
+    }
+  }
+  @include respond-to(sm){
+    .input-group{
+      width: 400px;
+      padding-left: 30px;
+    }
+  }
+  @include respond-to(ssm){
+    .input-group{
+      width: 300px;
+      padding-left: 30px;
+    }
+  }
 
   form {
     display: block;
