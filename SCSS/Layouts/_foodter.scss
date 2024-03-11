@@ -76,6 +76,12 @@
       border-right: none;
     }
   }
+  @include respond-to(lg){
+    .nav .trangchu{
+      padding-left: 0px !important;
+    }
+  }
+  
 }
 .footer-menu {
   .input-group-btn {

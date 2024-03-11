@@ -111,11 +111,28 @@ header{
     @include respond-to(lg){
         .middle__content{
             padding-left: 0px !important;
+            .box-search{
+                padding-left: 3px !important;
+            }
+            .order-tracking{
+                padding-left: 10px;
+            }
         }
     }
     @include respond-to(md){
         .middle__content{
             padding-left: 3px !important;
+        }
+    }
+    @include respond-to(sm){
+        .middle__content{
+            padding-left: 13px !important;
+        }
+        .order-tracking{
+            padding-left: 10px;
+        }
+        .box-search{
+            padding-left: 10px !important;
         }
     }
   
