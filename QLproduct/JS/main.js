@@ -1,11 +1,13 @@
 const api = new Api();
 let dssp = [];
-
+const validation = new Validation();
+//==========rút gọn code ============
 function getId(id) {
   return document.getElementById(id);
 }
+//===================================
 getlocal();
-
+//==hiển thì trang quản trị =========
 function renderUI(data) {
   let content = "";
   for (let i = 0; i < data.length; i++) {
@@ -30,12 +32,13 @@ function renderUI(data) {
   }
   getId("tblDanhSachSP").innerHTML = content;
 }
-
+// =========lưu local================
 function setlocal(data) {
   const arrstring = data;
   const arrJson = JSON.stringify(arrstring);
   localStorage.setItem("phone", arrJson);
 }
+// ========= lấy dữ liệu từ local ===
 function getlocal() {
   if (!localStorage.getItem("phone")) return;
   const arrJson = localStorage.getItem("phone");
@@ -43,12 +46,15 @@ function getlocal() {
   dssp = arrstring;
   renderUI(arrstring);
 }
+// ========== xóa sản phẩm ==========
 function xoaproduct(id) {
   api.deletephone(id).then(() => {
     getlistphone();
     setlocal();
   });
 }
+
+// ========= sửa sản phẩm ===========
 function editproduct(id) {
   api.editphone(id).then((win) => {
     document.querySelector(".modal-title").innerHTML = "Edit Product";
@@ -68,6 +74,8 @@ function editproduct(id) {
   <button id="suasp" onclick="updateproduct(${id})" class="btn btn-success">Cập Nhật</button>
   `;
 }
+
+// ======= cập nhật sản phẩm ========
 function updateproduct(id) {
   const name = getId("TenSP").value;
   const price = getId("GiaSP").value;
@@ -89,13 +97,16 @@ function updateproduct(id) {
     type,
     ""
   );
-  console.log(sp);
+  
   api.updatephone(sp).then((win) => {
     getlistphone();
     setlocal();
     document.getElementsByClassName("close")[0].click();
   });
 }
+
+// ======== thêm sản phẩm ===========
+
 getId("themsp").onclick = function () {
   const name = getId("TenSP").value;
   const price = getId("GiaSP").value;
@@ -117,13 +128,31 @@ getId("themsp").onclick = function () {
     type,
     ""
   );
+  let isvalid = true;
+  isvalid &= validation.vali("tbname",name,"(*)hãy nhập tên sản phẩm")
+  isvalid &= validation.vali("tbprice",price,"(*)hãy nhập giá sản phẩm")&&
+  validation.valinumber("tbprice",price,"(*)giá sản phẩm không đúng kiểu dữ liệu")
+  isvalid &= validation.vali("tbsrceen",screen,"(*)vui lòng điền thông tin")&&
+  validation.valinumber("tbsrceen",screen,"(*)không đúng kiểu dữ liệu")
+  isvalid &= validation.vali("tbback",back,"(*)vui lòng điền thông tin")&&
+  validation.valinumber("tbback",back,"(*)không đúng kiểu dữ liệu")
+  isvalid &= validation.vali("tbfont",font,"(*)vui lòng điền thông tin")&&
+  validation.valinumber("tbfont",font,"(*)không đúng kiểu dữ liệu")
+  isvalid &= validation.vali("tbcamera",img,"(*)hãy điền dầy đủ thông tin")&&
+  validation.valiimg('tbcamera',img,"(*)không đúng cú pháp ảnh")
+  isvalid &= validation.vali('tbdesc',desr,"(*)mô tả sản phẩm")
+  isvalid &= validation.vali('tbtype',type,"(*)hãy chọn loại sản phẩm")
+
+  if(isvalid === false)return null
   api.addphone(sp).then(function (win) {
-    console.log(win.data);
+   
     setlocal(win.data);
     document.getElementsByClassName("close")[0].click();
     getlistphone();
   });
 };
+
+// == lấy thông tin sản phẩm từ api =
 
 function getlistphone() {
   api
@@ -136,7 +165,12 @@ function getlistphone() {
     })
     .catch();
 }
+
+// ==================================
 getlistphone();
+
+
+// ==== reset lại thông tin ==========
 getId("btnThemSP").onclick = () => {
   document.querySelector(".modal-title").innerHTML = "Add Product";
   getId("themsp").style.display = "block";
@@ -150,8 +184,8 @@ getId("btnThemSP").onclick = () => {
   getId("MoTa").value = "";
   getId("inptype").value = "";
 };
-console.log(sapxepxuong(dssp))
 
+// ===== sắp xếp sản phẩm theo giá ==
 function mychange(){
   let sapxep = getId("sapxep1").value;
   if(sapxep === "uptodown"){
@@ -161,3 +195,5 @@ function mychange(){
   }
 
 }
+
+

@@ -25,5 +25,9 @@
 .form__button button:first-of-type{
     display: none;
 }
-
+.form-group label span {
+    color: red;
+    font-size: 15px;
+    display: none;
+}
 
