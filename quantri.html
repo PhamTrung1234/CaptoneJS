@@ -15,7 +15,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
     
   <body>
@@ -53,7 +53,8 @@
               </button>
             <div class="nav__themmoi--right">
               <span class="mr-2">sắp xếp</span>
-              <select id="sapxep1">
+              <select onchange="mychange()" id="sapxep1">
+                <option >Sắp xếp</option>
                 <option value="uptodown">giá giảm dần</option>
                 <option value="downtoup">giá tăng dần</option>
               </select>
@@ -156,13 +157,13 @@
               <div class="form-group">
                 <label>Type</label>
                 <select class="d-block w-50" id="inptype">
-                  <option>Chọn loại máy</option>
+                  
                   <option value="samsung">Samsung</option>
                   <option value="iphone">Iphone</option>
                 </select>
               </div>
               <div class="form__button d-flex justify-content-end">
-                <button id="suasp" class="btn btn-success">Cập Nhật</button>
+                
                 <button id="themsp" class="btn btn-success">Thêm Sản Phẩm</button>
               </div>
             </div>
@@ -207,10 +208,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="../JS/api.js"></script>
-    <script src="./JS/product.js"></script>
-    <script src="./JS/danhsach.js"></script>
-    <script src="./JS/validation.js"></script>
-    <script src="./JS/main.js"></script>
+    <script src="./JS/api.js"></script>
+    <script src="./QLproduct/JS/product.js"></script>
+    <script src="./QLproduct/JS/danhsach.js"></script>
+    <script src="./QLproduct/JS/validation.js"></script>
+    <script src="./QLproduct/JS/main.js"></script>
   </body>
 </html>
+<img src="./img/" alt="">
