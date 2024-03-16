@@ -1,12 +1,6 @@
 const apigh = new ApiGH();
 
-
-
-
-
-
-
-
+getlistitem();
 
 
 function HienThiGH(gh) {
@@ -28,7 +22,11 @@ function HienThiGH(gh) {
       </a>
       <div class="cart__clear"></div>
       <span>${item.price}</span>
-      <input type="number" value="${item.quantity}">
+      <div class="quantity-selector">
+        <button class="quantity-selector__button minus">-</button>
+        <input class="quantity-selector__input" type="text" value="${item.quantity}">
+        <button class="quantity-selector__button plus">+</button>
+      </div>
       <span>${price}</span>
       <button onclick="deletesp(${item.id})" class="btn">Xóa</button>
       </div>
@@ -56,13 +54,26 @@ function getlistitem(){
             document.querySelector('.cart__slogan').style.display = "none"
             document.querySelector('.cart__product').style.display = "block"
             console.log(win.data)
+            setlocal(win.data);
        HienThiGH(win.data)
         }
         
       })
 }
+// =========lưu local================
+function setlocal(data) {
+  const arrstring = data;
+  const arrJson = JSON.stringify(arrstring);
+  localStorage.setItem("phonesave", arrJson);
+}
+// ========= lấy dữ liệu từ local ===
+function getlocal() {
+  if (!localStorage.getItem("phonesave")) return;
+  const arrJson = localStorage.getItem("phonesave");
+  const arrstring = JSON.parse(arrJson);
+  HienThiGH(arrstring);
+}
 
-getlistitem();
 
 
 

@@ -33,6 +33,50 @@
     <link rel="stylesheet" href="../css/main.css" />
    
   </head>
+  <style>
+    .quantity-selector {
+ 
+    align-items: center;
+    width: 220px;
+    padding-left: 30px;
+    border-radius: 4px;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+.quantity-selector__button {
+    background-color: #f3f3f3;
+    color: #333;
+    font-size: 16px;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-selector__button:hover {
+    background-color: #ddd;
+}
+
+.quantity-selector__input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.minus {
+    border-radius: 4px 0 0 4px;
+}
+
+.plus {
+    border-radius: 0 4px 4px 0;
+}
+
+  </style>
   <body>
     <!-- header ánh -->
     <header>
@@ -175,7 +219,7 @@
     </header>
     <section class="cart">
      <div class="container">
-        <div class="cart__slogan d-flex">
+        <div class="cart__slogan">
             <img width="100" src="../img/9bdd8040b334d31946f4.png" alt="...">
             <p>giỏ hàng của bạn còn trống</p>
             <a href="../index.html">Mua ngay</a>

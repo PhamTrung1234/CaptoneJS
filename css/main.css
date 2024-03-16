@@ -811,13 +811,17 @@ footer .footer__icon .footer__item4 a {
 }
 .cart .cart__item span:first-of-type {
   width: 15.88022%;
+  padding-left: 50px;
 }
 .cart .cart__item input {
   width: 15.4265%;
+  
 }
 .cart .cart__item span:last-of-type {
   width: 10.43557%;
   color: #ed3237;
+  padding-right: 40px;
+  padding-left: 20px;
 }
 .cart .cart__item button {
   width: 12.70417%;
