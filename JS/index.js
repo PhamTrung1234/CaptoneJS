@@ -4,9 +4,10 @@ const dsdt=new DSPHONE();
 const dsgh=new DSGH();
 
 function getListProduct() {
-    const promise = apiindex.fecthData();
-    //pending => show loader
+  //pending => show loader
     document.getElementById("loader").style.display="block";
+    const promise = apiindex.fecthData();
+    
     promise
     .then(function (result){
         // success => hide loader
@@ -141,46 +142,31 @@ function findPhone(type) {
 }
 
 //them gio hang
+const apigiohang = new ApiGH();
 function ThemGH(id) {
-    console.log(123);
-    // let found = false;
-    // dsdt.arr.forEach(function(item){
-    //     if (item.id == id) {
-    //         if(item.Quantity <= 0) {
-    //             alert('Sản phẩm đã hết hàng');
-    //         } else {
-    //                 let newCartItem = new Cartitem(item.id, item.phonename, item.phoneprice, item.image, 1);
-    //                 dsgh.themGH(newCartItem);
-    //             }
-    //     }
-    // });
+  
+  // let found = false;
+  dsdt.arr.forEach(function(item){
+      if (item.id == id) {
+          if(item.Quantity <= 0) {
+              // alert('Sản phẩm đã hết hàng');
+          } else {
+                  let newCartItem = new Cartitem(item.id, item.phonename, item.phoneprice, item.image, 1);
+              console.log(newCartItem) 
+                   apigiohang.addproduct(newCartItem)
+                   .then((win)=>{
+                    console.log(win.data)
+                   })
+                  // dsgh.themGH(newCartItem);
+              }
+      }
 
-    // if (!found) {
-    //     alert('Không tìm thấy sản phẩm');
-    // }
-    // HienThiGH(dsgh.arr);
+  });
+
+  // if (!found) {
+  //     alert('Không tìm thấy sản phẩm');
+  // }
+ 
 }
 
-function HienThiGH(gh) {
-    content="";
-    gh.forEach(function(item){
-        content+=`<a href="#">
-        <div class="row">
-          <div class="col-3">
-            <img class="img-fluid" src="../img/${item.image}" alt="...">
-          </div>
-          <div class="col-9">
-             <p>${item.name}</p>
-          </div>
-        </div>
-      </a>
-      <div class="cart__clear"></div>
-      <span>${item.price}</span>
-      <input type="number" value="${item.quantity}">
-      <span>${item.price*item.quatity}</span>
-      <button class="btn">Xóa</button>`
-    });
-    
-    document.getElementById("giohang").innerHTML=content;
-}
 
