@@ -33,6 +33,28 @@
     <link rel="stylesheet" href="./css/main.css" />
     
   </head>
+  <style>
+    .loader {
+        border: 16px solid #f3f3f3;
+        /* Light grey */
+        border-top: 16px solid #3498db;
+        /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
   <body>
     <!-- header ánh -->
     <header>
@@ -151,9 +173,8 @@
                 SẢN PHẨM
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">SamSung</a>
-                <a class="dropdown-item" href="#">APPLE</a>
-                <a class="dropdown-item" href="#">OPPO</a>
+                <a class="dropdown-item" onclick="findPhone('samsung')" href="#">SamSung</a>
+                <a class="dropdown-item" onclick="findPhone('apple')" href="#">APPLE</a>
               </div>
             </li>
             <li class="nav-item">
@@ -248,48 +269,8 @@
             </div>
           </div>
           <div id="productbody">
-            <div class="row">
-              <div class="col-9 col-md-4  col-lg-2 product__item">
-                <div class="product--item">
-                  <a href="#">
-                    <div class="product__img">
-                      <img class="img-fluid" src="./img/0c9767e5-3759-4229-8613-18e0d6993c3f.jpg" alt="...">
-                    <span class="product__giamgia">-5%</span>
-                    </div>
-                    <h3 class="mt-2">samsunggalaxy3</h3>
-                    <p class="d-flex justify-content-between align-items-center">
-                      <span>70000000</span>
-                      <span>-5%</span>
-                    </p>
-                    <p class="d-flex justify-content-between align-items-center">
-                      <span>màn hình </span>
-                      <span>16inch</span>
-                    </p>
-                    <p class="d-flex justify-content-between align-items-center">
-                      <span>camera trước</span>
-                      <span>15mp</span>
-                    </p>
-                    <p class="d-flex justify-content-between align-items-center">
-                      <span>camera sau</span>
-                      <span>30mp</span>
-                    </p>
-                    <div class="product__button mt-2 d-flex justify-content-between align-items-center">
-                      <div class="product__icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                      </div>
-                      <div class="product__buy ">
-                        <button><i class="fa-solid fa-cart-shopping"></i><span>buy now</span></button>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-             
-            </div>
+            <div id="loader" style="display: none" class="loader"></div>
+            <div class="row" id="phone_content_main"></div>
           </div>
           <div class="product__nav d-flex justify-content-center">
             <a href="#">xem thêm</a>
@@ -501,11 +482,15 @@
 })
     </script>
     <!-- Main -->
-    <script src="./JS/product.js"></script>
+    <script src="./QLproduct/JS/product.js"></script>
     <script src="./JS/api.js"></script>
-    <script src="./JS/validation.js"></script>
+    <script src="./QLproduct/JS/validation.js"></script>
     <script src="./JS/util.js"></script>
-    <script src="./JS/main.js"></script>
-
+    <script src="./QLproduct/JS/danhsach.js"></script>
+    <script src="./JS/apiIndex.js"></script>
+    <script src="./JS/productlist.js"></script>
+    <script src="./JS/cartItem.js"></script>
+    <script src="./JS/cartlist.js"></script>
+    <script src="./JS/index.js"></script>
   </body>
 </html>
