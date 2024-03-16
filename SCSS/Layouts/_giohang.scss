@@ -56,8 +56,9 @@
     margin: 10px 0;
     background-color: $color-white-1;
     a{
+      text-align: start;
       width: 29.03811%;
-      font-size: 13px;
+      font-size: 15px;
       transition: all 0.5s;
       &:hover{
         color: $color-red-1;
@@ -69,7 +70,7 @@
     span:first-of-type{
       width: 15.88022%;
     }
-    input{
+    .cart__quantity{
       width: 15.4265%;
     }
     span:last-of-type{

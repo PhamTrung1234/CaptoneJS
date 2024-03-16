@@ -192,11 +192,18 @@ function mychange(){
        renderUI(sapxepxuong(dssp))
   }else if(sapxep==="downtoup"){
        renderUI(sapxeplen(dssp))
+  }else{
+    getlistphone();
   }
 
 }
+//========= tìm sản phẩm ============
 
-
+getId('searchpro').addEventListener("keyup",()=>{
+  const keyup = getId('searchpro').value;
+  let arr = searchpro(keyup);
+  renderUI(arr);
+})
 
 
 

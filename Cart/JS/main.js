@@ -1,7 +1,9 @@
 const apigh = new ApiGH();
 
-getlistitem();
-
+// getlistitem();
+function getId(id){
+    return document.getElementById(id)
+}
 
 function HienThiGH(gh) {
     content="";
@@ -21,11 +23,11 @@ function HienThiGH(gh) {
         </div>
       </a>
       <div class="cart__clear"></div>
-      <span>${item.price}</span>
-      <div class="quantity-selector">
-        <button class="quantity-selector__button minus">-</button>
-        <input class="quantity-selector__input" type="text" value="${item.quantity}">
-        <button class="quantity-selector__button plus">+</button>
+      <span class="cart__price">${item.price}</span>
+      <div class="cart__quantity d-flex justify-content-center">
+        <button onclick="down(${item.id})" style="width:40px"  class="btn border text-center"><i class="fa-solid fa-angles-left"></i></button>
+        <input style="width:40px; margin:0 3px" class="text-center border-0" type="text" value="${item.quantity}">
+        <button onclick="uppro(${item.id})" style="width:40px" class="btn border text-center"><i class="fa-solid fa-angles-right"></i></button>
       </div>
       <span>${price}</span>
       <button onclick="deletesp(${item.id})" class="btn">Xóa</button>
@@ -44,36 +46,53 @@ function deletesp(id){
 }
 
 function getlistitem(){
+    getId('loader1').style.display = "block"
+    document.querySelector('.cart__product').style.display = "none"
     apigh.fesdata()
       .then((win)=>{
-        console.log()
+        
+       
         if(win.data.length === 0){
+            getId('loader1').style.display = "none"
             document.querySelector('.cart__slogan').style.display = "block"
             document.querySelector('.cart__product').style.display = "none"
         }else{
+            getId('loader1').style.display = "none"
             document.querySelector('.cart__slogan').style.display = "none"
             document.querySelector('.cart__product').style.display = "block"
-            console.log(win.data)
-            setlocal(win.data);
-       HienThiGH(win.data)
+           
+            // setlocal(win.data);
+             HienThiGH(win.data)
         }
         
       })
 }
-// =========lưu local================
-function setlocal(data) {
-  const arrstring = data;
-  const arrJson = JSON.stringify(arrstring);
-  localStorage.setItem("phonesave", arrJson);
-}
-// ========= lấy dữ liệu từ local ===
-function getlocal() {
-  if (!localStorage.getItem("phonesave")) return;
-  const arrJson = localStorage.getItem("phonesave");
-  const arrstring = JSON.parse(arrJson);
-  HienThiGH(arrstring);
-}
+getlistitem();
 
+
+
+function uppro(id){
+   
+    let chuoi = document.querySelectorAll(".cart__item img")[id-2].src
+    let tru = "http://127.0.0.1:5500/CaptoneJS/img/"
+    let image = chuoi.replace(tru, "").trim();
+    let name = document.querySelectorAll(".cart__item p")[id-2].innerHTML
+   
+    let price = document.querySelectorAll(".cart__item .cart__price")[id-2].innerHTML
+    
+    let quantity = document.querySelectorAll(".cart__item input")[id-2].value;
+   
+    quantity = Number(quantity)+Number(1)
+    
+    
+        const sp = new SanPham(id,name,price,image,quantity)
+       
+    apigh.updatapro(sp)
+       .then(()=>{
+        getlistitem();
+       })
+
+}
 
 
 

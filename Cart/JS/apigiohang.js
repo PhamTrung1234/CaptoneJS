@@ -19,4 +19,11 @@ function ApiGH(){
             
         })
     }
+    this.updatapro = (pro)=>{
+            return axios({
+                url:"https://65f56c20f54db27bc0231b88.mockapi.io/product/" + pro.id,
+                method:"PUT",
+                data:pro
+            })
+    }
 }
