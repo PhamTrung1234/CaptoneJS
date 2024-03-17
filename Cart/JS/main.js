@@ -1,10 +1,10 @@
 const apigh = new ApiGH();
 
-// getlistitem();
+getlistitem();
 function getId(id){
     return document.getElementById(id)
 }
-
+// =============== hiển thị sản phẩm =========
 function HienThiGH(gh) {
     content="";
     total = 0;
@@ -42,6 +42,7 @@ function HienThiGH(gh) {
     var formattedTotal = total.toLocaleString('en-US'); // Định dạng số với dấu chấm (hoặc dấu phẩy) hàng nghìn
     getId('texttotal').innerHTML = formattedTotal+" VNĐ";
 }
+// ============= xóa sản phẩm ================
 function deletesp(id){
    
     apigh.deletepro(id)
@@ -49,7 +50,7 @@ function deletesp(id){
         getlistitem();
       })
 }
-
+// ============ lấy dữ liệu từ api ===========
 function getlistitem(){
      document.querySelector('.cart__thanhtoan').style.display = "none"
     getId('loader1').style.display = "block"
@@ -75,10 +76,10 @@ function getlistitem(){
         
       })
 }
-getlistitem();
 
 
 
+// ============= tăng quantity ================
 function uppro(id){
    
    apigh.fesdata()
@@ -97,7 +98,7 @@ function uppro(id){
            })
       })
 }
-
+// ========= giảm quantity ====================
 function down(id){
   
   apigh.fesdata()
@@ -125,14 +126,16 @@ function down(id){
     
   })
 }
-
+// ===== thanh toán ============================
 function deleteapi(){
-  console.log(123)
-  let arr = document.querySelectorAll(".btn__xoa")
-  console.log(arr)
-  arr.forEach((pro)=>{
-    pro.click()
-  })
   
+  let arr = document.querySelectorAll(".btn__xoa")
+ arr.forEach(pro=>{
+  pro.click();
+ })
+ 
 }
 
+
+ 
+  

@@ -2,10 +2,14 @@
 const apiindex = new ApiIndex();
 const dsdt = new DSPHONE();
 const dsgh = new DSGH();
+
+getListProduct();
+
 document.addEventListener('DOMContentLoaded', function() {
   // Gọi hàm để thêm sản phẩm vào giỏ hàng
   addToCart();
 });
+// =========== lấy dữ liệu từ api =============
 function getListProduct() {
   //pending => show loader
   document.getElementById("loader").style.display = "block";
@@ -23,7 +27,7 @@ function getListProduct() {
     });
 }
 
-getListProduct();
+// ========== hiển thì danh sách
 
 function renderUIindex(data) {
   let content = "";
@@ -35,7 +39,7 @@ function renderUIindex(data) {
     content += `
         <div class="col-9 col-md-4  col-lg-2 product__item">
                 <div class="product--item">
-                  <a href="#">
+                  < href="#">
                     <div class="product__img">
                       <img class="img-fluid" src="./img/${product.image}" alt="...">
                     <span class="product__giamgia">-5%</span>
@@ -73,7 +77,7 @@ function renderUIindex(data) {
                         <button onclick="ThemGH(${product.id})"><i class="fa-solid fa-cart-shopping"></i><span>buy now</span></button>
                       </div>
                     </div>
-                  </a>
+                  </
                 </div>
               </div>
         `;
@@ -148,13 +152,13 @@ function ThemGH(id) {
   dsdt.arr.forEach(function (item) {
     if (item.id == id) {
       let newCartItem = new Cartitem(
-        item.id,
+        id,
         item.phonename,
         item.phoneprice,
         item.image,
         1
       );
-      console.log(newCartItem.name)
+      
      apigiohang.fesdata()
         .then((win)=>{
           return win.data;
