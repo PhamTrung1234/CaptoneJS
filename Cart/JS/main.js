@@ -38,7 +38,7 @@ function HienThiGH(gh) {
     document.getElementById("giohang").innerHTML=content;
 }
 function deletesp(id){
-    console.log(id)
+   
     apigh.deletepro(id)
       .then((win)=>{
         getlistitem();
@@ -72,7 +72,7 @@ getlistitem();
 
 
 function uppro(id){
-   console.log(id)
+   
    apigh.fesdata()
       .then((win)=>{
         
@@ -90,7 +90,33 @@ function uppro(id){
       })
 }
 
-
+function down(id){
+  
+  apigh.fesdata()
+  .then((win)=>{
+    
+    let arr =[]
+    for(let i=0;i<win.data.length;i++){
+      if(Number(win.data[i].id) === Number(id)){
+        arr = win.data[i]
+      }
+    }
+    arr.quantity =Number(arr.quantity) - 1
+    console.log(arr.quantity)
+    if(Number(arr.quantity)===0){
+      apigh.deletepro(id)
+         .then(()=>{
+          getlistitem()
+         })
+    }else{
+      apigh.updatapro(arr)
+      .then(()=>{
+       getlistitem();
+      })
+    }
+    
+  })
+}
 
 
 
