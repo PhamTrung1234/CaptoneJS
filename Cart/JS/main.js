@@ -126,10 +126,12 @@ function down(id){
 }
 
 function deleteapi(){
+  console.log(123)
   let arr = document.querySelectorAll(".btn__xoa")
+  console.log(arr)
   arr.forEach((pro)=>{
     pro.click()
   })
- 
+  
 }
 
