@@ -107,7 +107,6 @@ header .navbar {
   color: #BEDB00;
   height: 39px;
   line-height: 19px;
-  position: relative;
 }
 header .navbar li {
   display: inline-block;
@@ -351,7 +350,7 @@ header .nav__middle .cart_header .cart-items {
   right: 0;
   text-align: center;
   top: 11px;
-  color: rgba(255, 0, 0, 0.562);
+  color: #fff;
 }
 header .nav__middle .cart_header .cart_header_top_box {
   background: #fff none repeat scroll 0 0;
@@ -389,20 +388,10 @@ header .navigation-menu {
   color: #fff;
   height: 36px;
   line-height: 20px;
-  position: relative;
-  transition: all 0.3s ease;
 }
 header .navigation-menu li {
   display: inline-block;
   padding: 8px 0 8px 10px;
-}
-header .fixed-top {
-  position: fixed;
-  height: 40px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
 }
 header .navigation-menu li a {
   color: #fff;
@@ -483,11 +472,14 @@ header .navigation-menu .navbar-nav .nav-item .tc {
 .product .product__top select option:hover {
   background-color: #f0f0f0;
 }
+.product #phone_content_main {
+  padding: 30px 0;
+}
 .product .product__item {
   padding: 5px;
 }
 .product .product__item .product--item {
-  margin: 50px 0;
+  margin: 20px 0;
   background-color: #fff;
   box-shadow: 0px 1px 6px 5px #E5E5E5;
   padding: 10px;

@@ -17,7 +17,7 @@ function renderUI(data) {
         <td>${i + 1}</td>
         <td>${sp.phonename}</td>
         <td>${sp.phoneprice}</td>
-        <td><img width="50" src="./img/${sp.image}" alt="..."></td>
+        <td><img width="50" src="../img/${sp.image}" alt="..."></td>
         <td>${sp.desc}</td>
         <td>
         <button onclick="xoaproduct(${

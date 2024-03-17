@@ -152,7 +152,7 @@
                 SẢN PHẨM
               </a>
               <div class="dropdown-menu">
-                
+                <a class="dropdown-item" onclick="findPhone('sapxep')" href="javascript:;">Sắp Xếp</a>
                 <a class="dropdown-item" onclick="findPhone('samsung')" href="javascript:;">SamSung</a>
                 <a class="dropdown-item" onclick="findPhone('apple')" href="javascript:;">APPLE</a>
               </div>
@@ -237,16 +237,7 @@
                 <option>500</option>
               </select>
             </div>
-            <div class="product__right">
-              <span>Sắp xếp</span>
-              <select id="sapxep">
-                    <option >Mặc định</option>
-                    <option value="samsung">Máy samsung</option>
-                    <option value="iphone">Máy iphone</option>
-                    <option value="uptodown">Giá giảm dần</option>
-                    <option value="downtoup">Giá tăng dần</option>
-              </select>
-            </div>
+            
           </div>
           <div id="productbody">
             <div id="loader" style="display: none" class="loader"></div>
@@ -462,16 +453,14 @@
 })
     </script>
     <!-- Main -->
-    <!-- <script src="./QLproduct/JS/product.js"></script> -->
+    
     <script src="./JS/api.js"></script>
     <script src="./Cart/JS/apigiohang.js"></script>
-    <!-- <script src="./QLproduct/JS/validation.js"></script> -->
+  
     <script src="./JS/util.js"></script>
-    <!-- <script src="./QLproduct/JS/danhsach.js"></script> -->
-    <script src="./JS/apiIndex.js"></script>
     <script src="./JS/productlist.js"></script>
     <script src="./JS/cartItem.js"></script>
-    <script src="./JS/cartlist.js"></script>
+    <script src="./JS/backtotop.js"></script>
     <script src="./JS/index.js"></script>
     <script>
       window.addEventListener('scroll', function() {
