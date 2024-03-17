@@ -7,9 +7,10 @@ function getId(id){
 
 function HienThiGH(gh) {
     content="";
+    total = 0;
     gh.forEach(function(item){
         let price = item.price * Number(item.quantity)
-        
+        total += price;
         content+=`
         <div class="cart__item d-flex align-items-center">
         <a href="#">
@@ -30,12 +31,13 @@ function HienThiGH(gh) {
         <button onclick="uppro(${item.id})" style="width:40px" class="btn border text-center"><i class="fa-solid fa-angles-right"></i></button>
       </div>
       <span>${price}</span>
-      <button onclick="deletesp(${item.id})" class="btn">Xóa</button>
+      <button onclick="deletesp(${item.id})" class="btn btn__xoa">Xóa</button>
       </div>
       `
     });
     
     document.getElementById("giohang").innerHTML=content;
+    getId('texttotal').innerHTML = total
 }
 function deletesp(id){
    
@@ -46,8 +48,10 @@ function deletesp(id){
 }
 
 function getlistitem(){
+     document.querySelector('.cart__thanhtoan').style.display = "none"
     getId('loader1').style.display = "block"
     document.querySelector('.cart__product').style.display = "none"
+   
     apigh.fesdata()
       .then((win)=>{
         
@@ -56,11 +60,12 @@ function getlistitem(){
             getId('loader1').style.display = "none"
             document.querySelector('.cart__slogan').style.display = "block"
             document.querySelector('.cart__product').style.display = "none"
+            document.querySelector('.cart__thanhtoan').style.display = "none"
         }else{
             getId('loader1').style.display = "none"
             document.querySelector('.cart__slogan').style.display = "none"
             document.querySelector('.cart__product').style.display = "block"
-           
+            document.querySelector('.cart__thanhtoan').style.display = "block"
             // setlocal(win.data);
              HienThiGH(win.data)
         }
@@ -118,5 +123,11 @@ function down(id){
   })
 }
 
-
+function deleteapi(){
+  let arr = document.querySelectorAll(".btn__xoa")
+  arr.forEach((pro)=>{
+    pro.click()
+  })
+ 
+}
 

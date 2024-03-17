@@ -763,10 +763,8 @@ footer .footer__icon .footer__item4 a {
   position: relative;
 }
 .cart .cart__slogan {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  transform: translateY(60%);
+  transform: translate(40%, 50%);
   color: rgba(0, 0, 0, 0.4);
   font-size: 0.875rem;
   line-height: 1rem;
@@ -780,6 +778,9 @@ footer .footer__icon .footer__item4 a {
   color: #fff;
   padding: 15px 50px;
   background-color: #ed3237;
+}
+.cart .cart__slogan img {
+  transform: translateX(44%);
 }
 .cart .car__heading {
   width: 100%;
@@ -851,4 +852,7 @@ footer .footer__icon .footer__item4 a {
   color: #ed3237;
   font-size: 18px;
   text-transform: uppercase;
+}
+.nav__middle .cart__thanhtoan {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
