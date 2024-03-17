@@ -472,5 +472,16 @@
     <script src="./JS/cartItem.js"></script>
     <script src="./JS/cartlist.js"></script>
     <script src="./JS/index.js"></script>
+    <script>
+      window.addEventListener('scroll', function() {
+          var navbar = document.querySelector('.navigation-menu');
+          if (window.scrollY > 0) { // Khi người dùng đã lướt xuống trang
+              navbar.classList.add('fixed-top');
+          } else { // Khi người dùng đã lướt lên trên đầu trang
+              navbar.classList.remove('fixed-top');
+          }
+      });
+      </script>
+      
   </body>
 </html>

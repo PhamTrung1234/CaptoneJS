@@ -24,20 +24,22 @@ function HienThiGH(gh) {
         </div>
       </a>
       <div class="cart__clear"></div>
-      <span class="cart__price">${item.price}</span>
+      <span class="cart__price">${item.price.toLocaleString('en-US')} VNĐ</span>
       <div class="cart__quantity d-flex justify-content-center">
         <button onclick="down(${item.id})" style="width:40px"  class="btn border text-center"><i class="fa-solid fa-angles-left"></i></button>
         <input style="width:40px; margin:0 3px" class="text-center border-0" type="text" value="${item.quantity}">
         <button onclick="uppro(${item.id})" style="width:40px" class="btn border text-center"><i class="fa-solid fa-angles-right"></i></button>
       </div>
-      <span>${price}</span>
+      <span>${price.toLocaleString('en-US')} VNĐ</span>
       <button onclick="deletesp(${item.id})" class="btn btn__xoa">Xóa</button>
       </div>
       `
     });
     
     document.getElementById("giohang").innerHTML=content;
-    getId('texttotal').innerHTML = total
+
+    var formattedTotal = total.toLocaleString('en-US'); // Định dạng số với dấu chấm (hoặc dấu phẩy) hàng nghìn
+    getId('texttotal').innerHTML = formattedTotal+" VNĐ";
 }
 function deletesp(id){
    

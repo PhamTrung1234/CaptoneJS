@@ -351,7 +351,7 @@ header .nav__middle .cart_header .cart-items {
   right: 0;
   text-align: center;
   top: 11px;
-  color: #fff;
+  color: rgba(255, 0, 0, 0.562);
 }
 header .nav__middle .cart_header .cart_header_top_box {
   background: #fff none repeat scroll 0 0;
@@ -390,10 +390,19 @@ header .navigation-menu {
   height: 36px;
   line-height: 20px;
   position: relative;
+  transition: all 0.3s ease;
 }
 header .navigation-menu li {
   display: inline-block;
   padding: 8px 0 8px 10px;
+}
+header .fixed-top {
+  position: fixed;
+  height: 40px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 header .navigation-menu li a {
   color: #fff;
