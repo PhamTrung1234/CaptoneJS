@@ -1,36 +1,35 @@
 // hien thi san pham
-const apiindex=new ApiIndex();
-const dsdt=new DSPHONE();
-const dsgh=new DSGH();
+const apiindex = new ApiIndex();
+const dsdt = new DSPHONE();
+const dsgh = new DSGH();
 
 function getListProduct() {
   //pending => show loader
-    document.getElementById("loader").style.display="block";
-    const promise = apiindex.fecthData();
-    
-    promise
-    .then(function (result){
-        // success => hide loader
-        document.getElementById("loader").style.display="none";
-        renderUIindex(result.data);
-    })  
-    .catch(function(error){
-        document.getElementById("loader").style.display="none";
-        console.log(error);
+  document.getElementById("loader").style.display = "block";
+  const promise = apiindex.fecthData();
+
+  promise
+    .then(function (result) {
+      // success => hide loader
+      document.getElementById("loader").style.display = "none";
+      renderUIindex(result.data);
+    })
+    .catch(function (error) {
+      document.getElementById("loader").style.display = "none";
+      console.log(error);
     });
-    
 }
 
 getListProduct();
 
-function renderUIindex(data){
-     let content="";
-    // for(let i=0; i<data.length; i++){
-    //     const product=data[i];
-    //     content += ``;
-    // }
-    data.forEach(function (product){
-        content+=`
+function renderUIindex(data) {
+  let content = "";
+  // for(let i=0; i<data.length; i++){
+  //     const product=data[i];
+  //     content += ``;
+  // }
+  data.forEach(function (product) {
+    content += `
         <div class="col-9 col-md-4  col-lg-2 product__item">
                 <div class="product--item">
                   <a href="#">
@@ -75,15 +74,15 @@ function renderUIindex(data){
                 </div>
               </div>
         `;
-        dsdt.ThemPhone(product);
-    });
-    document.getElementById("phone_content_main").innerHTML = content;
+    dsdt.ThemPhone(product);
+  });
+  document.getElementById("phone_content_main").innerHTML = content;
 }
 
 function hienthidsPhone(arrdt) {
-    let content="";
-    arrdt.forEach(function(product){
-        content+=` <div class="col-9 col-md-4  col-lg-2 product__item">
+  let content = "";
+  arrdt.forEach(function (product) {
+    content += ` <div class="col-9 col-md-4  col-lg-2 product__item">
         <div class="product--item">
           <a href="#">
             <div class="product__img">
@@ -125,48 +124,61 @@ function hienthidsPhone(arrdt) {
             </div>
           </a>
         </div>
-      </div>`
-
-    });
-    document.getElementById("phone_content_main").innerHTML = content;
+      </div>`;
+  });
+  document.getElementById("phone_content_main").innerHTML = content;
 }
 
 function findPhone(type) {
-    const mangtimkiem=dsdt.timdienthoaitheoloai(type);
-    if (mangtimkiem == null || mangtimkiem.length==0){
-        console.log("array is empty");
-    }
-    else{
-        hienthidsPhone(mangtimkiem);
-    }
+  const mangtimkiem = dsdt.timdienthoaitheoloai(type);
+  if (mangtimkiem == null || mangtimkiem.length == 0) {
+    console.log("array is empty");
+  } else {
+    hienthidsPhone(mangtimkiem);
+  }
 }
 
 //them gio hang
 const apigiohang = new ApiGH();
 function ThemGH(id) {
   
-  // let found = false;
-  dsdt.arr.forEach(function(item){
-      if (item.id == id) {
-          if(item.Quantity <= 0) {
-              // alert('Sản phẩm đã hết hàng');
-          } else {
-                  let newCartItem = new Cartitem(item.id, item.phonename, item.phoneprice, item.image, 1);
-              console.log(newCartItem) 
-                   apigiohang.addproduct(newCartItem)
-                   .then((win)=>{
-                    console.log(win.data)
-                   })
-                  // dsgh.themGH(newCartItem);
+  dsdt.arr.forEach(function (item) {
+    if (item.id == id) {
+      let newCartItem = new Cartitem(
+        item.id,
+        item.phonename,
+        item.phoneprice,
+        item.image,
+        1
+      );
+      console.log(newCartItem.name)
+     apigiohang.fesdata()
+        .then((win)=>{
+          return win.data;
+        })
+        .then((data)=>{
+          
+          let found =false
+          for(let i=0;i<data.length;i++){
+              if(data[i].name == newCartItem.name){
+                found = true;
+                data[i].quantity = Number(data[i].quantity) + 1;
+                
+                apigiohang.updatapro(data[i])
+                .then(()=>{})
               }
-      }
+          }
+          if(!found){
+            apigiohang.addproduct(newCartItem)
+              .then(()=>{})
+          }
 
+
+      
+        })
+     
+
+      
+    }
   });
-
-  // if (!found) {
-  //     alert('Không tìm thấy sản phẩm');
-  // }
- 
 }
-
-
