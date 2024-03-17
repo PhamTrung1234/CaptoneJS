@@ -67,7 +67,7 @@ function renderUIindex(data) {
                         <i class="fa-regular fa-star"></i>
                       </div>
                       <div class="product__buy">
-                        <button onclick="ThemGH(${product.id})"><i class="fa-solid fa-cart-shopping"></i><span>buy now</span></button>
+                        <button onclick="ThemGH(${product.id}); addToCart();"><i class="fa-solid fa-cart-shopping"></i><span>buy now</span></button>
                       </div>
                     </div>
                   </a>
@@ -119,7 +119,7 @@ function hienthidsPhone(arrdt) {
                 <i class="fa-regular fa-star"></i>
               </div>
               <div class="product__buy">
-                <button onclick="ThemGH(${product.id})><i class="fa-solid fa-cart-shopping"></i><span>buy now</span></button>
+                <button onclick="ThemGH(${product.id});addToCart();"><i class="fa-solid fa-cart-shopping"></i><span>buy now</span></button>
               </div>
             </div>
           </a>
@@ -181,4 +181,17 @@ function ThemGH(id) {
       
     }
   });
+}
+function addToCart() {
+  // Lấy thẻ span chứa số lượng sản phẩm trong giỏ hàng
+  var cartItemsElement = document.querySelector('.cart-items');
+
+  // Lấy số lượng sản phẩm hiện tại từ nội dung của thẻ span
+  var currentCount = parseInt(cartItemsElement.innerText);
+
+  // Tăng số lượng lên 1
+  var newCount = currentCount + 1;
+
+  // Cập nhật nội dung của thẻ span
+  cartItemsElement.innerText = newCount;
 }
