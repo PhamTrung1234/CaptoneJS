@@ -72,26 +72,22 @@ getlistitem();
 
 
 function uppro(id){
-   
-    let chuoi = document.querySelectorAll(".cart__item img")[id-2].src
-    let tru = "http://127.0.0.1:5500/CaptoneJS/img/"
-    let image = chuoi.replace(tru, "").trim();
-    let name = document.querySelectorAll(".cart__item p")[id-2].innerHTML
-   
-    let price = document.querySelectorAll(".cart__item .cart__price")[id-2].innerHTML
-    
-    let quantity = document.querySelectorAll(".cart__item input")[id-2].value;
-   
-    quantity = Number(quantity)+Number(1)
-    
-    
-        const sp = new SanPham(id,name,price,image,quantity)
-       
-    apigh.updatapro(sp)
-       .then(()=>{
-        getlistitem();
-       })
-
+   console.log(id)
+   apigh.fesdata()
+      .then((win)=>{
+        
+        let arr =[]
+        for(let i=0;i<win.data.length;i++){
+          if(Number(win.data[i].id) === Number(id)){
+            arr = win.data[i]
+          }
+        }
+        arr.quantity =Number(arr.quantity) + 1
+        apigh.updatapro(arr)
+           .then(()=>{
+            getlistitem();
+           })
+      })
 }
 
 
