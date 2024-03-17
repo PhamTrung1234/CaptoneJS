@@ -2,7 +2,10 @@
 const apiindex = new ApiIndex();
 const dsdt = new DSPHONE();
 const dsgh = new DSGH();
-
+document.addEventListener('DOMContentLoaded', function() {
+  // Gọi hàm để thêm sản phẩm vào giỏ hàng
+  addToCart();
+});
 function getListProduct() {
   //pending => show loader
   document.getElementById("loader").style.display = "block";
@@ -67,7 +70,7 @@ function renderUIindex(data) {
                         <i class="fa-regular fa-star"></i>
                       </div>
                       <div class="product__buy">
-                        <button onclick="ThemGH(${product.id}); addToCart();"><i class="fa-solid fa-cart-shopping"></i><span>buy now</span></button>
+                        <button onclick="ThemGH(${product.id})"><i class="fa-solid fa-cart-shopping"></i><span>buy now</span></button>
                       </div>
                     </div>
                   </a>
@@ -119,7 +122,7 @@ function hienthidsPhone(arrdt) {
                 <i class="fa-regular fa-star"></i>
               </div>
               <div class="product__buy">
-                <button onclick="ThemGH(${product.id});addToCart();"><i class="fa-solid fa-cart-shopping"></i><span>buy now</span></button>
+                <button onclick="ThemGH(${product.id})"><i class="fa-solid fa-cart-shopping"></i><span>buy now</span></button>
               </div>
             </div>
           </a>
@@ -187,11 +190,14 @@ function addToCart() {
   var cartItemsElement = document.querySelector('.cart-items');
 
   // Lấy số lượng sản phẩm hiện tại từ nội dung của thẻ span
-  var currentCount = parseInt(cartItemsElement.innerText);
-
+  apigiohang.fesdata().then((res)=> {
+    var current=parseInt(cartItemsElement.innerText);
+    var newCount=current+res.data.length;
+    cartItemsElement.innerText = newCount;
+  }).catch((err)=>{console.log("Error: "+ err)});
   // Tăng số lượng lên 1
-  var newCount = currentCount + 1;
+ 
 
   // Cập nhật nội dung của thẻ span
-  cartItemsElement.innerText = newCount;
+  
 }
