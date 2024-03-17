@@ -11,6 +11,7 @@ function HienThiGH(gh) {
     gh.forEach(function(item){
         let price = item.price * Number(item.quantity)
         total += price;
+        let priceformat=item.price*1;
         content+=`
         <div class="cart__item d-flex align-items-center">
         <a href="#">
@@ -24,7 +25,7 @@ function HienThiGH(gh) {
         </div>
       </a>
       <div class="cart__clear"></div>
-      <span class="cart__price">${item.price.toLocaleString('en-US')} VNĐ</span>
+      <span class="cart__price">${priceformat.toLocaleString('en-US')} VNĐ</span>
       <div class="cart__quantity d-flex justify-content-center">
         <button onclick="down(${item.id})" style="width:40px"  class="btn border text-center"><i class="fa-solid fa-angles-left"></i></button>
         <input style="width:40px; margin:0 3px" class="text-center border-0" type="text" value="${item.quantity}">
