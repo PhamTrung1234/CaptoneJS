@@ -105,8 +105,6 @@ header .navbar {
   background-color: #1D00DB;
   margin-bottom: 0;
   color: #BEDB00;
-  height: 39px;
-  line-height: 19px;
 }
 header .navbar li {
   display: inline-block;
@@ -115,7 +113,6 @@ header .navbar li {
 header .navbar li a {
   color: #fff;
   text-transform: uppercase;
-  text-align: center;
   padding: 0 10px 0 0;
   border-right: 1px solid #999;
   font-weight: 500;
@@ -142,10 +139,7 @@ header .navbar button {
   margin-top: -5px;
 }
 header .navbar .show .nav-item {
-  background-color: #BEDB00;
   z-index: 100;
-  border-bottom: 1px solid #666;
-  width: 200px;
   transition: background-color 0.5s;
 }
 header .navbar .show .nav__contact .active {
@@ -175,7 +169,7 @@ header .navbar .nav__hotline {
     display: none;
   }
   header .navbar .nav-item {
-    text-align: center;
+    padding-left: 0;
   }
 }
 header .nav__middle {
@@ -386,8 +380,6 @@ header .clear {
 header .navigation-menu {
   background-color: #BEDB00;
   color: #fff;
-  height: 36px;
-  line-height: 20px;
 }
 header .navigation-menu li {
   display: inline-block;
@@ -396,7 +388,6 @@ header .navigation-menu li {
 header .navigation-menu li a {
   color: #fff;
   text-transform: uppercase;
-  text-align: center;
   padding: 0 10px 0 0;
   border-right: 1px solid #999;
   font-weight: 500;
@@ -410,19 +401,21 @@ header .navigation-menu li a:hover {
 header .navigation-menu li:last-of-type a {
   border-right: 1px solid #BEDB00;
 }
-header .navigation-menu .show .nav-item {
-  background-color: #BEDB00;
-  z-index: 100;
-  border-bottom: 1px solid #666;
+header .navigation-menu .dropdown-menu {
   width: 200px;
+  text-align: center;
+}
+header .navigation-menu .dropdown-menu .dropdown-item {
+  color: #888888;
+}
+header .navigation-menu .show .nav-item {
+  z-index: 100;
   transition: background-color 0.5s;
 }
 header .navigation-menu .show .active {
   margin-top: 5px;
 }
 header .navigation-menu .show .dropdown-menu {
-  background-color: #BEDB00;
-  text-align: center;
   border: none;
 }
 header .navigation-menu .show .dropdown-menu .dropdown-item:hover {
@@ -449,7 +442,7 @@ header .navigation-menu .navbar-nav .nav-item .tc {
 .product {
   padding: 50px 0 30px 0;
 }
-.product h2 span {
+.product .product__top h2 {
   text-transform: uppercase;
   text-align: center;
   color: #ed3237;

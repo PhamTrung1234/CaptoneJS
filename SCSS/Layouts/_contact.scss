@@ -1,13 +1,14 @@
 .product {
   padding: 50px 0 30px 0;
-  h2 {
-    span {
+  
+  .product__top {
+    h2 {
+    
       text-transform: uppercase;
       text-align: center;
       color: $color-red-1;
-    }
+    
   }
-  .product__top {
     span{
       font-weight: bold;
       color: $color-black-1;

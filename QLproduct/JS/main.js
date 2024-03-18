@@ -6,7 +6,7 @@ function getId(id) {
   return document.getElementById(id);
 }
 //===================================
-getlocal();
+
 //==hiển thì trang quản trị =========
 function renderUI(data) {
   let content = "";
@@ -32,25 +32,12 @@ function renderUI(data) {
   }
   getId("tblDanhSachSP").innerHTML = content;
 }
-// =========lưu local================
-function setlocal(data) {
-  const arrstring = data;
-  const arrJson = JSON.stringify(arrstring);
-  localStorage.setItem("phone", arrJson);
-}
-// ========= lấy dữ liệu từ local ===
-function getlocal() {
-  if (!localStorage.getItem("phone")) return;
-  const arrJson = localStorage.getItem("phone");
-  const arrstring = JSON.parse(arrJson);
-  dssp = arrstring;
-  renderUI(arrstring);
-}
+
 // ========== xóa sản phẩm ==========
 function xoaproduct(id) {
   api.deletephone(id).then(() => {
     getlistphone();
-    setlocal();
+   
   });
 }
 
@@ -116,18 +103,7 @@ getId("themsp").onclick = function () {
   const img = getId("HinhSP").value;
   const desr = getId("MoTa").value;
   const type = getId("inptype").value;
-  const sp = new Product(
-    "",
-    name,
-    price,
-    screen,
-    back,
-    font,
-    img,
-    desr,
-    type,
-    ""
-  );
+  
   let isvalid = true;
   isvalid &= validation.vali("tbname",name,"(*)hãy nhập tên sản phẩm")
   isvalid &= validation.vali("tbprice",price,"(*)hãy nhập giá sản phẩm")&&
@@ -143,10 +119,22 @@ getId("themsp").onclick = function () {
   isvalid &= validation.vali('tbdesc',desr,"(*)mô tả sản phẩm")
   isvalid &= validation.vali('tbtype',type,"(*)hãy chọn loại sản phẩm")
 
-  if(isvalid === false)return null
+  if(!isvalid) return null
+  const sp = new Product(
+    "",
+    name,
+    price,
+    screen,
+    back,
+    font,
+    img,
+    desr,
+    type,
+    ""
+  );
   api.addphone(sp).then(function (win) {
    
-    setlocal(win.data);
+    console.log(win.data)
     document.getElementsByClassName("close")[0].click();
     getlistphone();
   });
@@ -161,7 +149,7 @@ function getlistphone() {
       dssp = win.data;
 
       renderUI(win.data);
-      setlocal(win.data);
+      
     })
     .catch();
 }

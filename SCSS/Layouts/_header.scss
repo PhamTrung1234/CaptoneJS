@@ -12,8 +12,8 @@ header{
     background-color: $color-blue-1;
     margin-bottom: 0;
     color: $color-blue-2 ;
-    height: 39px;
-    line-height: 19px;
+    // height: 39px;
+    // line-height: 19px;
     // position: relative;
     li{
         display: inline-block;
@@ -85,7 +85,7 @@ header{
             display: none;
         }
         .nav-item{
-            text-align: center;
+           padding-left: 0;
         }
     }
     
@@ -309,11 +309,12 @@ header{
 .clear{
     clear: both;
 }
+
 .navigation-menu {
     background-color: $color-blue-2;
     color: $color-white-1;
-    height: 36px;
-    line-height: 20px;
+    // height: 36px;
+    // line-height: 20px;
     // position: relative;
   
     li {
@@ -322,6 +323,7 @@ header{
   
       a {
        @include a-style2;
+       
         
         &:hover {
           color: $color-red-1;
@@ -332,14 +334,20 @@ header{
         border-right: 1px solid $color-blue-2;
       }
     }
+    .dropdown-menu{
+        width: 200px;
+        text-align: center;
+        .dropdown-item{
+            color: $color-white-3
+        }
+    }
     .show{
        @include nav-show;
        .active{
         margin-top: 5px;
        }
        .dropdown-menu {
-        background-color: $color-blue-2;
-        text-align: center;
+        
         border: none;
         
         .dropdown-item{

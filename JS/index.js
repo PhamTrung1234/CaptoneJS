@@ -62,7 +62,7 @@ function renderUIindex(data) {
                       <span>${product.fontcamera}</span>
                     </p>
                     <p class="d-flex justify-content-between align-items-center">
-                      <span>So luong</span>
+                      <span>${product.desc}</span>
                       <span>${product.Quantity}</span>
                     </p>
                     <div class="product__button mt-2 d-flex justify-content-between align-items-center">

@@ -143,7 +143,7 @@
         </button>
     
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav ">
             <li class="nav-item active">
               <a class="nav-link tc" href="#">TRANG CHỦ </a>
             </li>
@@ -170,7 +170,7 @@
         </div>
       </div>
     </nav>
-      
+    
     
     </header>
     <!-- carousel trung -->
@@ -225,9 +225,12 @@
     <section class="product">
        <div class="container">
         <div class="product__content">
-          <h2 class="d-flex justify-content-center"><span>sản phẩm</span></h2>
+          
           <div class="product__top d-flex justify-content-between align-items-center">
             <div class="product__left">
+            <h2 >sản phẩm</h2>  
+            </div>
+            <div class="product__right">
               <span>Sản phẩm/ Trang</span>
               <select>
                 <option>10</option>
@@ -237,7 +240,6 @@
                 <option>500</option>
               </select>
             </div>
-            
           </div>
           <div id="productbody">
             <div id="loader" style="display: none" class="loader"></div>
@@ -464,7 +466,7 @@
     <script src="./JS/index.js"></script>
     <script>
       window.addEventListener('scroll', function() {
-          var navbar = document.querySelector('.navigation-menu');
+          var navbar = document.querySelector('header');
           if (window.scrollY > 0) { // Khi người dùng đã lướt xuống trang
               navbar.classList.add('fixed-top');
           } else { // Khi người dùng đã lướt lên trên đầu trang
